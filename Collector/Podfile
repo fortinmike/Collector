@@ -1,0 +1,4 @@
+link_with 'Collector.iOS', 'Collector.iOS.Tests', 'Collector.Mac', 'Collector.Mac.Tests'
+
+podspec :path => "../Collector.podspec"
+pod 'Kiwi/XCTest', '~> 2.2.4'
