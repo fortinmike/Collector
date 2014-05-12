@@ -31,45 +31,6 @@
 
 #pragma mark Test Cases
 
-- (void)testMap
-{
-	NSArray *results = [[self disparateObjects] map:^id(id object) {
-		// Return the first value of the dictionary if the object is a dictionary
-		if ([object isKindOfClass:[NSDictionary class]])
-			return [(NSDictionary *)object allValues][0];
-		
-		return nil;
-	}];
-	XCTAssertEqual((int)[results count], 2, @"The wrong number of values were returned!");
-	XCTAssertEqualObjects(results[0], @"Value1", @"The returned value is wrong!");
-	XCTAssertEqualObjects(results[1], @"Value2", @"The returned value is wrong!");
-}
-
-- (void)testMapDerivedObjects
-{
-	NSArray *mutableStrings = [self strings];
-	NSArray *results = [mutableStrings map:^id(NSMutableString *string) {
-		return @"Something derived from the original object";
-	}];
-	
-	XCTAssertEqual([results count], [mutableStrings count], @"Object count changed");
-	
-	for (NSString *object in results)
-		XCTAssertEqualObjects(object, @"Something derived from the original object", @"The each: method did not affect all objects!");
-}
-
-- (void)testReduce
-{
-	NSArray *stuff = @[@"A", @"B", @"C", @"D"];
-	NSString *combined = [stuff reduce:^id(id cumulated, id object)
-	{
-		if (cumulated == nil) cumulated = @"";
-		return [cumulated stringByAppendingString:object];
-	}];
-	
-	XCTAssertEqualObjects(combined, @"ABCD");
-}
-
 - (void)testReduceWithSeed
 {
 	NSArray *stuff = @[@"A", @"B", @"C", @"D"];

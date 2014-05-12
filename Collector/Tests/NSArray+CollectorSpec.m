@@ -113,6 +113,26 @@ describe(@"NSArray+Collector", ^
 			[[resultingObjects should] equal:expectedObjects];
 		});
 	});
+	
+	context(@"reduce", ^
+	{
+		it(@"should return a value as cumulated by each iteration", ^
+		{
+			NSArray *strings = @[@"A", @"B", @"C", @"D"];
+			
+			NSString *combined = [strings reduce:^id(id cumulated, id object)
+			{
+				return [cumulated stringByAppendingString:object];
+			}];
+			
+			[[combined should] equal:@"ABCD"];
+		});
+	});
+	
+	context(@"reduce with seed", ^
+	{
+		
+	});
 });
 
 SPEC_END

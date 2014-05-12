@@ -121,7 +121,12 @@
 
 - (id)reduce:(id(^)(id cumulated, id object))reducingBlock
 {
-	return [self reduceWithSeed:nil block:reducingBlock];
+	id result = [self firstObject];
+	
+	for (int i = 1; i < [self count]; i++)
+		result = reducingBlock(result, self[i]);
+	
+	return result;
 }
 
 - (id)reduceWithSeed:(id)seed block:(id(^)(id cumulated, id object))reducingBlock
