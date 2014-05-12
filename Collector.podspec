@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Collector"
   s.version          = "1.0.0"
-  s.summary          = "Ruby and LINQ-inspired category methods on NSArray. Fully tested and documented."
+  s.summary          = "Ruby and LINQ-inspired category on NSArray. Fully tested and documented."
   s.homepage         = "http://github.com/fortinmike/Collector"
   s.license          = 'MIT'
   s.author           = { "Michaël Fortin" => "fortinmike@irradiated.net" }
