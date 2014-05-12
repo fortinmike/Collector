@@ -39,6 +39,19 @@ describe(@"NSArray+Collector", ^
 			[[[@[@1, @"Foo"] first:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }] should] beNil];
 		});
 	});
+	
+	context(@"first or default", ^
+	{
+		it(@"should return the first matching object if there are objects matching the condition in the array", ^
+		{
+			[[[@[@1, @"Foo", @2, @"Bar"] first:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; } orDefault:@"Default"] should] equal:@"Foo"];
+		});
+		
+		it(@"should return the default value if there are no objects matching the condition in the array", ^
+		{
+			[[[@[@1, @"Foo"] first:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; } orDefault:@"Default"] should] equal:@"Default"];
+		});
+	});
 });
 
 SPEC_END
