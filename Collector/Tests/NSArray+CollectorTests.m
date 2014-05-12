@@ -31,26 +31,6 @@
 
 #pragma mark Test Cases
 
-- (void)testWhereSimple
-{
-	NSArray *results = [[self disparateObjects] where:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }];
-	XCTAssertEqual((int)[results count], 2, @"The where method failed to return the right amount of numbers.");
-}
-
-- (void)testWhereComplex
-{
-	NSArray *results = [[self disparateObjects] where:^BOOL(id object) {
-		BOOL isDictionary = [object isKindOfClass:[NSDictionary class]];
-		if (isDictionary)
-		{
-			BOOL containsSpecialValue = ((NSDictionary *)object[@"Special"] != nil);
-			if (containsSpecialValue) return YES;
-		}
-		return NO;
-	}];
-	XCTAssertEqual((int)[results count], 1, @"The where method failed to return the right amount of numbers.");
-}
-
 - (void)testMap
 {
 	NSArray *results = [[self disparateObjects] map:^id(id object) {
