@@ -15,7 +15,7 @@
 
 - (NSNumber *)min
 {
-	return [self compare:^id(NSNumber *num1, NSNumber *num2)
+	return [self winner:^id(NSNumber *num1, NSNumber *num2)
 	{
 		return (([num1 compare:num2] == NSOrderedAscending) ? num1 : num2);
 	}];
@@ -23,7 +23,7 @@
 
 - (NSNumber *)max
 {
-	return [self compare:^id(NSNumber *num1, NSNumber *num2)
+	return [self winner:^id(NSNumber *num1, NSNumber *num2)
 	{
 		return (([num1 compare:num2] == NSOrderedDescending) ? num1 : num2);
 	}];

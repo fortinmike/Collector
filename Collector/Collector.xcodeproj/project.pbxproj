@@ -19,6 +19,14 @@
 		4C4AA70C19201E08008FB311 /* NSArray+Contents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA70919201E08008FB311 /* NSArray+Contents.h */; };
 		4C4AA70D19201E08008FB311 /* NSArray+Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA70A19201E08008FB311 /* NSArray+Contents.m */; };
 		4C4AA70E19201E08008FB311 /* NSArray+Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA70A19201E08008FB311 /* NSArray+Contents.m */; };
+		4C4AA7111920744D008FB311 /* NSArray+CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA7101920744D008FB311 /* NSArray+CollectorTests.m */; };
+		4C4AA7121920744D008FB311 /* NSArray+CollectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA7101920744D008FB311 /* NSArray+CollectorTests.m */; };
+		4C4AA714192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */; };
+		4C4AA715192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */; };
+		4C4AA7171920763C008FB311 /* NSArray+ContentsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */; };
+		4C4AA7181920763C008FB311 /* NSArray+ContentsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */; };
+		4C4AA71A192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */; };
+		4C4AA71B192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */; };
 		4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
@@ -61,6 +69,11 @@
 		4C4AA70419201B50008FB311 /* NSArray+Numbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Numbers.m"; sourceTree = "<group>"; };
 		4C4AA70919201E08008FB311 /* NSArray+Contents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Contents.h"; sourceTree = "<group>"; };
 		4C4AA70A19201E08008FB311 /* NSArray+Contents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Contents.m"; sourceTree = "<group>"; };
+		4C4AA70F1920744D008FB311 /* NSArray+CollectorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CollectorTests.h"; sourceTree = "<group>"; };
+		4C4AA7101920744D008FB311 /* NSArray+CollectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CollectorTests.m"; sourceTree = "<group>"; };
+		4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NumbersSpec.m"; sourceTree = "<group>"; };
+		4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ContentsSpec.m"; sourceTree = "<group>"; };
+		4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CollectorSpec.m"; sourceTree = "<group>"; };
 		4C59965719145A4900EFA82C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4C59965A19145A4900EFA82C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C59965B19145A4900EFA82C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -183,6 +196,11 @@
 		4CC18D4919145CA300CEECEC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4C4AA70F1920744D008FB311 /* NSArray+CollectorTests.h */,
+				4C4AA7101920744D008FB311 /* NSArray+CollectorTests.m */,
+				4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */,
+				4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */,
+				4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */,
 				4CC18D4A19145CA300CEECEC /* CollectorTests-Info.plist */,
 			);
 			path = Tests;
@@ -503,6 +521,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4AA7181920763C008FB311 /* NSArray+ContentsSpec.m in Sources */,
+				4C4AA715192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */,
+				4C4AA7121920744D008FB311 /* NSArray+CollectorTests.m in Sources */,
+				4C4AA71B192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +542,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4AA7171920763C008FB311 /* NSArray+ContentsSpec.m in Sources */,
+				4C4AA714192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */,
+				4C4AA7111920744D008FB311 /* NSArray+CollectorTests.m in Sources */,
+				4C4AA71A192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
