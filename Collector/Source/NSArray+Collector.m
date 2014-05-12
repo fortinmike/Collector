@@ -41,7 +41,7 @@
 
 - (id)last:(ConditionBlock)condition
 {
-	return [[self reversed] first:condition];
+	return [[[self reverseObjectEnumerator] allObjects] first:condition];
 }
 
 - (id)last:(ConditionBlock)condition orDefault:(id)defaultObject
@@ -163,7 +163,7 @@
 	for (id contestant in self)
 		winner = comparisonBlock(winner, contestant);
 	
-	return winner	;
+	return winner;
 }
 
 - (BOOL)all:(ConditionBlock)testBlock
@@ -202,71 +202,6 @@
 		count += testBlock(object);
 	
 	return count;
-}
-
-#pragma mark Sorting / Ordering
-
-- (instancetype)reversed
-{
-	return [[[self reverseObjectEnumerator] allObjects] mutableCopy];
-}
-
-- (NSArray *)shuffled
-{
-	NSMutableArray *copy = [self mutableCopy];
-	NSMutableArray *shuffled = [NSMutableArray array];
-	
-	while ([copy count] > 0)
-	{
-		int randomInteger = arc4random_uniform((int)[copy count]);
-		id randomItem = copy[randomInteger];
-		[shuffled addObject:randomItem];
-		[copy removeObject:randomItem];
-	}
-	
-	return shuffled;
-}
-
-- (instancetype)orderedByAscending:(GatheringBlock)valueBlock
-{
-	NSArray *sorted = [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2)
-	{
-		id value1 = valueBlock(obj1);
-		id value2 = valueBlock(obj2);
-		
-		if (value1 != nil && value2 == nil)
-		{
-			return NSOrderedDescending;
-		}
-		else if (value1 == nil && value2 != nil)
-		{
-			return NSOrderedAscending;
-		}
-		else if (!value1 && !value2)
-		{
-			return NSOrderedSame;
-		}
-		if ([value1 isKindOfClass:[NSNumber class]] && [value2 isKindOfClass:[NSNumber class]])
-		{
-			return [(NSNumber *)value1 compare:(NSNumber *)value2];
-		}
-		else if ([value1 isKindOfClass:[NSString class]] && [value2 isKindOfClass:[NSString class]])
-		{
-			return [(NSString *)value1 localizedStandardCompare:(NSString *)value2];
-		}
-		else
-		{
-			NSString *reason = [NSString stringWithFormat:@"Cannot compare values %@ and %@ for ordering", value1, value2];
-			@throw [NSException exceptionWithName:@"Ordering Exception" reason:reason userInfo:nil];
-		}
-	}];
-	
-	return [sorted mutableCopy];
-}
-
-- (instancetype)orderedByDescending:(GatheringBlock)valueBlock
-{
-	return [[self orderedByAscending:valueBlock] reversed];
 }
 
 @end

@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef void (^OperationBlock)(id object);
-typedef BOOL (^ConditionBlock)(id object);
-typedef id (^GatheringBlock)(id object);
+#import "CollectorBlockTypes.h"
 
 @interface NSArray (Collector)
 
@@ -220,41 +217,5 @@ typedef id (^GatheringBlock)(id object);
  *  @return The number of objects that pass the test.
  */
 - (NSUInteger)count:(ConditionBlock)testBlock;
-
-#pragma mark Sorting / Ordering
-
-/**
- *  Returns a copy of the array with its elements reversed.
- *
- *  @return A new array containing the receiver's objects in reverse order.
- */
-- (instancetype)reversed;
-
-/**
- *  Randomizes objects in an array.
- *
- *  @return A new array containing the same items as the receiver but in random order.
- */
-- (instancetype)shuffled;
-
-/**
- *  Returns the array items in ascending order based on the value returned by the block.
- *
- *  @param valueBlock Returns the value used to perform ordering (ex: person.firstName).
- *                    Supported types include NSString and NSNumber.
- *
- *  @return A new array with the same items as the receiver but sorted in ascending order based on the values returned from *valueBlock*.
- */
-- (instancetype)orderedByAscending:(GatheringBlock)valueBlock;
-
-/**
- *  Returns the array items in descending order based on the value returned by the block.
- *
- *  @param valueBlock Returns the value used to perform ordering (ex: person.firstName).
- *                    Supported types include NSString and NSNumber.
- *
- *  @return A new array with the same items as the receiver but sorted in descending order based on the values returned from *valueBlock*.
- */
-- (instancetype)orderedByDescending:(GatheringBlock)valueBlock;
 
 @end

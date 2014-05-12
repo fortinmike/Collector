@@ -27,6 +27,12 @@
 		4C4AA7181920763C008FB311 /* NSArray+ContentsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */; };
 		4C4AA71A192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */; };
 		4C4AA71B192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */; };
+		4C4AA71E1920823D008FB311 /* NSArray+Sorting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */; };
+		4C4AA71F1920823D008FB311 /* NSArray+Sorting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */; };
+		4C4AA7201920823D008FB311 /* NSArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */; };
+		4C4AA7211920823D008FB311 /* NSArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */; };
+		4C4AA7231920826A008FB311 /* CollectorBlockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */; };
+		4C4AA7241920826A008FB311 /* CollectorBlockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */; };
 		4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
@@ -74,6 +80,9 @@
 		4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NumbersSpec.m"; sourceTree = "<group>"; };
 		4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ContentsSpec.m"; sourceTree = "<group>"; };
 		4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CollectorSpec.m"; sourceTree = "<group>"; };
+		4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sorting.h"; sourceTree = "<group>"; };
+		4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sorting.m"; sourceTree = "<group>"; };
+		4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectorBlockTypes.h; sourceTree = "<group>"; };
 		4C59965719145A4900EFA82C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4C59965A19145A4900EFA82C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C59965B19145A4900EFA82C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -83,8 +92,8 @@
 		4C5BB19219145D25009CB21B /* Collector.Mac.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Collector.Mac.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC18D2319145C6400CEECEC /* Collector.iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Collector.iOS.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC18D2F19145C6400CEECEC /* Collector.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Collector.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Collector-Prefix.pch"; sourceTree = "<group>"; };
-		4CC18D4519145C9B00CEECEC /* Collector.Mac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Collector.Mac-Info.plist"; sourceTree = "<group>"; };
+		4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Collector-Prefix.pch"; path = "Source/Collector-Prefix.pch"; sourceTree = "<group>"; };
+		4CC18D4519145C9B00CEECEC /* Collector.Mac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Collector.Mac-Info.plist"; path = "Source/Collector.Mac-Info.plist"; sourceTree = "<group>"; };
 		4CC18D4A19145CA300CEECEC /* CollectorTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CollectorTests-Info.plist"; sourceTree = "<group>"; };
 		4CC252DC191C1E7300E49DF7 /* Collector.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Collector.podspec; path = ../Collector.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4CC252DD191C1E7300E49DF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -181,14 +190,15 @@
 		4CC18D4319145C9B00CEECEC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */,
-				4CC18D4519145C9B00CEECEC /* Collector.Mac-Info.plist */,
+				4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */,
 				4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */,
 				4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */,
-				4C4AA70319201B50008FB311 /* NSArray+Numbers.h */,
-				4C4AA70419201B50008FB311 /* NSArray+Numbers.m */,
 				4C4AA70919201E08008FB311 /* NSArray+Contents.h */,
 				4C4AA70A19201E08008FB311 /* NSArray+Contents.m */,
+				4C4AA70319201B50008FB311 /* NSArray+Numbers.h */,
+				4C4AA70419201B50008FB311 /* NSArray+Numbers.m */,
+				4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */,
+				4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -209,6 +219,8 @@
 		4CC252DB191C1E5D00E49DF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */,
+				4CC18D4519145C9B00CEECEC /* Collector.Mac-Info.plist */,
 				4CC252DC191C1E7300E49DF7 /* Collector.podspec */,
 				4CC252DD191C1E7300E49DF7 /* README.md */,
 			);
@@ -223,8 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CECFCF319145E540022AA2A /* Collector-Prefix.pch in Headers */,
+				4C4AA71F1920823D008FB311 /* NSArray+Sorting.h in Headers */,
 				4C4AA70C19201E08008FB311 /* NSArray+Contents.h in Headers */,
 				4C4AA7001920150F008FB311 /* NSArray+Collector.h in Headers */,
+				4C4AA7241920826A008FB311 /* CollectorBlockTypes.h in Headers */,
 				4C4AA70619201B50008FB311 /* NSArray+Numbers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,8 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC18D4719145C9B00CEECEC /* Collector-Prefix.pch in Headers */,
+				4C4AA71E1920823D008FB311 /* NSArray+Sorting.h in Headers */,
 				4C4AA70B19201E08008FB311 /* NSArray+Contents.h in Headers */,
 				4C4AA6FF1920150F008FB311 /* NSArray+Collector.h in Headers */,
+				4C4AA7231920826A008FB311 /* CollectorBlockTypes.h in Headers */,
 				4C4AA70519201B50008FB311 /* NSArray+Numbers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4AA7021920150F008FB311 /* NSArray+Collector.m in Sources */,
+				4C4AA7211920823D008FB311 /* NSArray+Sorting.m in Sources */,
 				4C4AA70819201B50008FB311 /* NSArray+Numbers.m in Sources */,
 				4C4AA70E19201E08008FB311 /* NSArray+Contents.m in Sources */,
 			);
@@ -533,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4AA7011920150F008FB311 /* NSArray+Collector.m in Sources */,
+				4C4AA7201920823D008FB311 /* NSArray+Sorting.m in Sources */,
 				4C4AA70719201B50008FB311 /* NSArray+Numbers.m in Sources */,
 				4C4AA70D19201E08008FB311 /* NSArray+Contents.m in Sources */,
 			);
