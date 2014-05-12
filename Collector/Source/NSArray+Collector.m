@@ -62,16 +62,6 @@
 	return selectedObjects;
 }
 
-- (instancetype)except:(ConditionBlock)condition
-{
-	return [self where:^BOOL(id object){ return !condition(object); }];
-}
-
-- (instancetype)take:(NSUInteger)amount
-{
-	return [[self objectsInRange:NSMakeRange(0, MIN(amount, [self count]))] mutableCopy];
-}
-
 - (instancetype)map:(GatheringBlock)gatheringBlock
 {
 	NSMutableArray *values = [NSMutableArray array];
@@ -83,40 +73,6 @@
 	}
 	
 	return values;
-}
-
-- (instancetype)distinct
-{
-	NSMutableArray *distinct = [NSMutableArray array];
-	
-	for (id object in self)
-	{
-		if ([distinct indexOfObject:object] == NSNotFound)
-			[distinct addObject:object];
-	}
-	
-	return distinct;
-}
-
-- (instancetype)distinct:(GatheringBlock)valueBlock
-{
-	return [self reduceWithSeed:[NSMutableArray array] block:^id(NSMutableArray *cumulated, id object)
-	{
-		id value = valueBlock(object);
-		BOOL objectAlreadyInArray = [cumulated none:^(id tested) { return [valueBlock(tested) isEqual:value]; }];
-		if (!objectAlreadyInArray) [cumulated addObject:object];
-		return cumulated;
-	}];
-}
-
-- (instancetype)objectsInRange:(NSRange)range
-{
-	return [[self objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:range]] mutableCopy];
-}
-
-- (instancetype)objectsOfKind:(Class)kind
-{
-	return [self where:^BOOL(id object) { return [object isKindOfClass:kind]; }];
 }
 
 - (id)reduce:(id(^)(id cumulated, id object))reducingBlock
@@ -151,6 +107,50 @@
 	{
 		operation(object, index);
 	}];
+}
+
+- (instancetype)except:(ConditionBlock)condition
+{
+	return [self where:^BOOL(id object){ return !condition(object); }];
+}
+
+- (instancetype)take:(NSUInteger)amount
+{
+	return [[self objectsInRange:NSMakeRange(0, MIN(amount, [self count]))] mutableCopy];
+}
+
+- (instancetype)distinct
+{
+	NSMutableArray *distinct = [NSMutableArray array];
+	
+	for (id object in self)
+	{
+		if ([distinct indexOfObject:object] == NSNotFound)
+			[distinct addObject:object];
+	}
+	
+	return distinct;
+}
+
+- (instancetype)distinct:(GatheringBlock)valueBlock
+{
+	return [self reduceWithSeed:[NSMutableArray array] block:^id(NSMutableArray *cumulated, id object)
+	{
+		id value = valueBlock(object);
+		BOOL objectAlreadyInArray = [cumulated none:^(id tested) { return [valueBlock(tested) isEqual:value]; }];
+		if (!objectAlreadyInArray) [cumulated addObject:object];
+		return cumulated;
+	}];
+}
+
+- (instancetype)objectsInRange:(NSRange)range
+{
+	return [[self objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:range]] mutableCopy];
+}
+
+- (instancetype)objectsOfKind:(Class)kind
+{
+	return [self where:^BOOL(id object) { return [object isKindOfClass:kind]; }];
 }
 
 - (id)winner:(id(^)(id object1, id object2))comparisonBlock

@@ -80,6 +80,49 @@ typedef id (^GatheringBlock)(id object);
 - (instancetype)where:(ConditionBlock)condition;
 
 /**
+ *  Creates a new array containing the objects returned from the gathering block.
+ *
+ *  @param gatheringBlock A block that extracts a value from each of the receiver's objects,
+ *                        or creates entirely new objects constructed from those values.
+ *
+ *  @return An array containing all objects returned from invocations of the gathering block.
+ */
+- (instancetype)map:(GatheringBlock)gatheringBlock;
+
+/**
+ *  Returns a single value by applying the block to all of the receiver's objects in sequence and cumulating the results.
+ *  The *cumulated* block parameter is nil for the first block invocation.
+ *
+ *  @param reducingBlock A block that returns the cumulated value at each iteration.
+ *  @param cumulated The last value that was returned from *reducingBlock*.
+ *  @param object The current array object.
+ *
+ *  @return The cumulated value after invoking *reducingBlock* on each of the receiver's objects.
+ */
+- (id)reduce:(id(^)(id cumulated, id object))reducingBlock;
+
+/**
+ *  Same as -reduce: but with an initial seed value.
+ */
+- (id)reduceWithSeed:(id)seed block:(id(^)(id cumulated, id object))reducingBlock;
+
+/**
+ *  Iterates over each object and performs the given operation with each object as an argument.
+ *  Equivalent to a *for each* but makes for a clean one-liner when iterating over array elements.
+ *
+ *  @param operation The operation to perform for each of the array's objects.
+ */
+- (void)each:(OperationBlock)operation;
+
+/**
+ *  Iterates over each object and performs the given operation with each object and the current index as arguments.
+ *  Useful when you care both about the current object and that object's index in the array.
+ *
+ *  @param operation The operation to perform for each of the array's objects.
+ */
+- (void)eachWithIndex:(void(^)(id object, NSUInteger index))operation;
+
+/**
  *  Selects all objects but those that match the specified condition.
  *
  *  @param condition A block that tests a single object for match.
@@ -96,16 +139,6 @@ typedef id (^GatheringBlock)(id object);
  *  @return The first *[amount]* objects of the array or fewer objects if the array is smaller than the specified amount.
  */
 - (instancetype)take:(NSUInteger)amount;
-
-/**
- *  Creates a new array containing the objects returned from the gathering block.
- *
- *  @param gatheringBlock A block that extracts a value from each of the receiver's objects,
- *                        or creates entirely new objects constructed from those values.
- *
- *  @return An array containing all objects returned from invocations of the gathering block.
- */
-- (instancetype)map:(GatheringBlock)gatheringBlock;
 
 /**
  *  Eliminates duplicates from an array by comparing objects together using -isEqual:.
@@ -142,39 +175,6 @@ typedef id (^GatheringBlock)(id object);
  *  @return A new array containing all objects that are of the given kind.
  */
 - (instancetype)objectsOfKind:(Class)kind;
-
-/**
- *  Returns a single value by applying the block to all of the receiver's objects in sequence and cumulating the results.
- *  The *cumulated* block parameter is nil for the first block invocation.
- *
- *  @param reducingBlock A block that returns the cumulated value at each iteration.
- *  @param cumulated The last value that was returned from *reducingBlock*.
- *  @param object The current array object.
- *
- *  @return The cumulated value after invoking *reducingBlock* on each of the receiver's objects.
- */
-- (id)reduce:(id(^)(id cumulated, id object))reducingBlock;
-
-/**
- *  Same as -reduce: but with an initial seed value.
- */
-- (id)reduceWithSeed:(id)seed block:(id(^)(id cumulated, id object))reducingBlock;
-
-/**
- *  Iterates over each object and performs the given operation with each object as an argument.
- *  Equivalent to a *for each* but makes for a clean one-liner when iterating over array elements.
- *
- *  @param operation The operation to perform for each of the array's objects.
- */
-- (void)each:(OperationBlock)operation;
-
-/**
- *  Iterates over each object and performs the given operation with each object and the current index as arguments.
- *  Useful when you care both about the current object and that object's index in the array.
- *
- *  @param operation The operation to perform for each of the array's objects.
- */
-- (void)eachWithIndex:(void(^)(id object, NSUInteger index))operation;
 
 /**
  *  Compares all array objects using the given *comparisonBlock* and returns the final winner.
