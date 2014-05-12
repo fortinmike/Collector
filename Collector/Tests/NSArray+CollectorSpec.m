@@ -143,6 +143,71 @@ describe(@"NSArray+Collector", ^
 			[[combined should] equal:@"Hello ABCD!"];
 		});
 	});
+	
+	context(@"each", ^
+	{
+		
+	});
+	
+	context(@"each with index", ^
+	{
+		
+	});
+	
+	context(@"except", ^
+	{
+		
+	});
+	
+	context(@"take", ^
+	{
+		
+	});
+	
+	context(@"distinct", ^
+	{
+		
+	});
+	
+	context(@"distinct with value block", ^
+	{
+		
+	});
+	
+	context(@"objects in range", ^
+	{
+		
+	});
+	
+	context(@"objects of kind", ^
+	{
+		
+	});
+	
+	context(@"winner", ^
+	{
+		
+	});
+	
+	context(@"all", ^
+	{
+		
+	});
+	
+	context(@"any", ^
+	{
+		
+	});
+	
+	context(@"none", ^
+	{
+		
+	});
+	
+	context(@"count with block", ^
+	{
+		
+	});
 });
 
 SPEC_END
