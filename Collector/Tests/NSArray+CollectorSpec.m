@@ -14,7 +14,18 @@ SPEC_BEGIN(NSArray_CollectorSpec)
 
 describe(@"NSArray+Collector", ^
 {
-	
+	context(@"first", ^
+	{
+		it(@"should return the first object when there are objects in the receiver", ^
+		{
+			[[[@[@1, @2, @3] firstObject] should] equal:@1];
+		});
+		
+		it(@"should return nil when there are no objects in the array", ^
+		{
+			[[[@[] firstObject] should] beNil];
+		});
+	});
 });
 
 SPEC_END

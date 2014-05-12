@@ -31,15 +31,6 @@
 
 #pragma mark Test Cases
 
-- (void)testFirst
-{
-	id object1 = [[self disparateObjects] first:^BOOL(id obj) { return [obj isKindOfClass:[NSString class]]; }];
-	XCTAssertEqualObjects(object1, @"Test", @"Returned object was not the first string");
-	
-	id object2 = [[self disparateObjects] first:^BOOL(id obj) { return [obj isKindOfClass:[NSDictionary class]]; }];
-	XCTAssertEqualObjects(object2, @{@"Key": @"Value1"}, @"Returned object was not the first dictionary");
-}
-
 - (void)testFirstOrDefault
 {
 	id object1 = [[self disparateObjects] first:^BOOL(id obj) { return [obj isKindOfClass:[NSString class]]; }  orDefault:@"Default"];
