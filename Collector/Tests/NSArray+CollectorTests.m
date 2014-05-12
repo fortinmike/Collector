@@ -31,17 +31,6 @@
 
 #pragma mark Test Cases
 
-- (void)testReduceWithSeed
-{
-	NSArray *stuff = @[@"A", @"B", @"C", @"D"];
-	NSString *combined = [stuff reduceWithSeed:@"" block:^id(id cumulated, id object)
-    {
-		return [cumulated stringByAppendingString:object];
-	}];
-	
-	XCTAssertEqualObjects(combined, @"ABCD");
-}
-
 - (void)testEach
 {
 	NSMutableArray *cumulated = [NSMutableArray array];

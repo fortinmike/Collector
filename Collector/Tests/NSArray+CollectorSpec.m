@@ -116,7 +116,7 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"reduce", ^
 	{
-		it(@"should return a value as cumulated by each iteration", ^
+		it(@"should return a value as cumulated by each iteration with the first cumulated value being the first object in the array", ^
 		{
 			NSArray *strings = @[@"A", @"B", @"C", @"D"];
 			
@@ -131,7 +131,17 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"reduce with seed", ^
 	{
-		
+		it(@"should return a cumulated value with the given seed as a starting point", ^
+		{
+			NSArray *strings = @[@"A", @"B", @"C", @"D", @"!"];
+			
+			NSString *combined = [strings reduceWithSeed:@"Hello " block:^id(id cumulated, id object)
+			{
+				return [cumulated stringByAppendingString:object];
+			}];
+			
+			[[combined should] equal:@"Hello ABCD!"];
+		});
 	});
 });
 
