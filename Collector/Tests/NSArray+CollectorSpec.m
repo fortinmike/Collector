@@ -57,6 +57,49 @@ describe(@"NSArray+Collector", ^
 		});
 	});
 	
+	context(@"last", ^
+	{
+		it(@"should return the last object when there are objects in the receiver", ^
+		{
+			[[[@[@1, @2, @3] first] should] equal:@3];
+		});
+		
+		it(@"should return nil when there are no objects in the array", ^
+		{
+			[[[@[] last] should] beNil];
+		});
+	});
+	
+	context(@"last with condition", ^
+	{
+		it(@"should return the last matching object if there are objects matching the condition in the array", ^
+		{
+			NSArray *objects = @[@1, @"Foo", @2, @"Bar", @3];
+			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }] should] equal:@"Bar"];
+		});
+		
+		it(@"should return nil if there are no objects matching the condition in the array", ^
+		{
+			NSArray *objects = @[@1, @"Foo"];
+			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }] should] beNil];
+		});
+	});
+	
+	context(@"last or default", ^
+	{
+		it(@"should return the last matching object if there are objects matching the condition in the array", ^
+		{
+			NSArray *objects = @[@1, @"Foo", @2, @"Bar"];
+			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; } orDefault:@"Default"] should] equal:@2];
+		});
+		
+		it(@"should return the default value if there are no objects matching the condition in the array", ^
+		{
+			NSArray *objects = @[@1, @"Foo"];
+			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; } orDefault:@"Default"] should] equal:@"Default"];
+		});
+	});
+	
 	context(@"where", ^
 	{
 		it(@"should return all objects that match the given condition", ^
