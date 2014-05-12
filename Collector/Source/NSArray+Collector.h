@@ -21,16 +21,92 @@ typedef id (^GatheringBlock)(id object);
 
 #pragma mark Block-based Array Manipulation and Filtering
 
-- (id)first; // Returns the first object in the array or nil if the array is empty
-- (id)first:(ConditionBlock)condition; // Returns the first object that matches or nil
-- (id)first:(ConditionBlock)condition orDefault:(id)defaultObject; // Returns the first object that matches or a default value
-- (id)last; // Returns the last object in the array or nil if the array is empty
-- (id)last:(ConditionBlock)condition; // Returns the last object that matches the condition, or nil if none is found
-- (id)last:(ConditionBlock)condition orDefault:(id)defaultObject; // Returns the last object that matches the condition or the specified default value
-- (instancetype)where:(ConditionBlock)condition; // Returns objects that match the specified condition
-- (instancetype)except:(ConditionBlock)condition; // Returns all objects but those that match the specified condition
-- (instancetype)take:(NSUInteger)count; // Returns the first [count] objects of the array or fewer objects if the array is smaller than the specified count
-- (instancetype)map:(GatheringBlock)gatheringBlock; // Returns objects gathered or computed from the array's objects as returned from the gathering block
+/**
+ *  Obtains the first object in the array. Equivalent to -firstObject.
+ *
+ *  @return The first object in the array, or nil if the array is empty.
+ */
+- (id)first;
+
+/**
+ *  Returns the first object that matches *condition* or nil if no object matches the condition.
+ *
+ *  @param condition A block that tests a single object for match.
+ *
+ *  @return The first object that matches the condition or nil if there is no match.
+ */
+- (id)first:(ConditionBlock)condition;
+
+/**
+ *  Returns the first object that matches *condition* or the specified default value.
+ *
+ *  @param condition     A block that tests a single object for match.
+ *  @param defaultObject The object that gets returned if no object was found.
+ */
+- (id)first:(ConditionBlock)condition orDefault:(id)defaultObject;
+
+/**
+ *  Obtains the last object in the array. Equivalent to -lastObject.
+ *
+ *  @return The last object in the array, or nil if the array is empty.
+ */
+- (id)last;
+
+/**
+ *  Returns the last object that matches a condition.
+ *
+ *  @param condition A block that tests a single object for match.
+ *
+ *  @return The last object that matches the condition, or nil if there is no match.
+ */
+- (id)last:(ConditionBlock)condition;
+
+/**
+ *  Returns the last object that matches *condition* or the specified default value.
+ *
+ *  @param condition     A block that tests a single object for match.
+ *  @param defaultObject The object that gets returned if no object was found.
+ */
+- (id)last:(ConditionBlock)condition orDefault:(id)defaultObject;
+
+/**
+ *  Selects items that match *condition*.
+ *
+ *  @param condition A block that tests a single object for match.
+ *
+ *  @return All objects that match the specified condition.
+ */
+- (instancetype)where:(ConditionBlock)condition;
+
+/**
+ *  Selects all objects but those that match the specified condition.
+ *
+ *  @param condition A block that tests a single object for match.
+ *
+ *  @return All objects that *don't* match the specified condition.
+ */
+- (instancetype)except:(ConditionBlock)condition;
+
+/**
+ *  Returns a given number of items from the array.
+ *
+ *  @param count The number of objects to take.
+ *
+ *  @return The first *[amount]* objects of the array or fewer objects if the array is smaller than the specified amount.
+ */
+- (instancetype)take:(NSUInteger)amount;
+
+/**
+ *  Creates a new array containing the objects returned from the gathering block.
+ *
+ *  @param gatheringBlock A block that extracts a value from each of the receiver's objects,
+ *                        or creates entirely new objects constructed from those values.
+ *
+ *  @return An array containing all objects returned from invocations of the gathering block.
+ */
+- (instancetype)map:(GatheringBlock)gatheringBlock;
+
+
 - (instancetype)distinct; // Returns a new collection where all duplicate objects have been eliminated
 - (instancetype)distinct:(GatheringBlock)valueBlock; // Returns objects from the source collection, eliminating duplicates based on the given block
 - (instancetype)objectsInRange:(NSRange)range; // Returns objects in the specified array range

@@ -78,9 +78,9 @@
 	return [self where:^BOOL(id object){ return !condition(object); }];
 }
 
-- (instancetype)take:(NSUInteger)count
+- (instancetype)take:(NSUInteger)amount
 {
-	return [[self objectsInRange:NSMakeRange(0, MIN(count, [self count]))] mutableCopy];
+	return [[self objectsInRange:NSMakeRange(0, MIN(amount, [self count]))] mutableCopy];
 }
 
 - (instancetype)map:(GatheringBlock)gatheringBlock
