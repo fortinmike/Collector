@@ -16,7 +16,22 @@ typedef id (^GatheringBlock)(id object);
 
 #pragma mark Creating Other Instances
 
+/**
+ *  Returns an array that is the same as the receiver but with the given object removed if it was present.
+ *
+ *  @param object The object to remove.
+ *
+ *  @return A new array containing all of the receiver's objects but the ones that are equal to the given object.
+ */
 - (instancetype)arrayByRemovingObject:(id)object;
+
+/**
+ *  Returns an array that is the same as the receiver but with the given objects removed if they were present.
+ *
+ *  @param array The objects to remove.
+ *
+ *  @return A new array containing all of the receiver's objects but the ones that are equal to the given objects.
+ */
 - (instancetype)arrayByRemovingObjectsFromArray:(NSArray *)array;
 
 #pragma mark Block-based Array Manipulation and Filtering
@@ -184,16 +199,76 @@ typedef id (^GatheringBlock)(id object);
  */
 - (id)winner:(id(^)(id object1, id object2))comparisonBlock;
 
-- (BOOL)all:(ConditionBlock)testBlock; // Tests each array object and returns YES only when all objects pass the test
-- (BOOL)any:(ConditionBlock)testBlock; // Tests each array object and returns YES if at least one of the objects passes the test
-- (BOOL)none:(ConditionBlock)testBlock; // Tests each array object and returns YES only if no object passes the test
-- (NSUInteger)count:(ConditionBlock)testBlock; // Tests each array object and returns the number of objects that pass the test
+/**
+ *  Tests each array object and returns YES only when all objects pass the test.
+ *
+ *  @param testBlock The test to perform for each object. Return YES when the object passes.
+ *
+ *  @return Whether all objects in the array pass the test.
+ */
+- (BOOL)all:(ConditionBlock)testBlock;
+
+/**
+ *  Tests each array object and returns YES if at least one of the objects passes the test.
+ *
+ *  @param testBlock The test to perform for each object. Return YES when the object passes.
+ *
+ *  @return Whether or not at least one of the objects in the array passes the test.
+ */
+- (BOOL)any:(ConditionBlock)testBlock;
+
+/**
+ *  Tests each array object and returns YES only if no object passes the test.
+ *
+ *  @param testBlock The test to perform for each object. Return YES when the object passes.
+ *
+ *  @return Whether or not *none* all objects in the array fails the test.
+ */
+- (BOOL)none:(ConditionBlock)testBlock;
+
+/**
+ *  Counts objects that match a given test block.
+ *
+ *  @param testBlock The test to perform for each object. Return YES when the object passes.
+ *
+ *  @return The number of objects that pass the test.
+ */
+- (NSUInteger)count:(ConditionBlock)testBlock;
 
 #pragma mark Sorting / Ordering
 
-- (instancetype)reversed; // Returns a copy of the array with its elements reversed
-- (instancetype)shuffled; // Returns another array containing the same items as the receiver but in a random order
-- (instancetype)orderedByAscending:(GatheringBlock)valueBlock; // Returns the array items in ascending order based on the value returned by the block
-- (instancetype)orderedByDescending:(GatheringBlock)valueBlock; // Returns the array items in descending order based on the value returned by the block
+/**
+ *  Returns a copy of the array with its elements reversed.
+ *
+ *  @return A new array containing the receiver's objects in reverse order.
+ */
+- (instancetype)reversed;
+
+/**
+ *  Randomizes objects in an array.
+ *
+ *  @return A new array containing the same items as the receiver but in random order.
+ */
+- (instancetype)shuffled;
+
+/**
+ *  Returns the array items in ascending order based on the value returned by the block.
+ *
+ *  @param valueBlock Returns the value used to perform ordering (ex: person.firstName).
+ *                    Supported types include NSString and NSNumber.
+ *
+ *  @return A new array with the same items as the receiver but sorted in ascending order based on the values returned from *valueBlock*.
+ */
+- (instancetype)orderedByAscending:(GatheringBlock)valueBlock;
+
+/**
+ *  Returns the array items in descending order based on the value returned by the block.
+ *
+ *  @param valueBlock Returns the value used to perform ordering (ex: person.firstName).
+ *                    Supported types include NSString and NSNumber.
+ *
+ *  @return A new array with the same items as the receiver but sorted in descending order based on the values returned from *valueBlock*.
+ */
+- (instancetype)orderedByDescending:(GatheringBlock)valueBlock;
 
 @end
