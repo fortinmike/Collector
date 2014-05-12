@@ -14,19 +14,6 @@ SPEC_BEGIN(NSArray_CollectorSpec)
 
 describe(@"NSArray+Collector", ^
 {
-	context(@"first", ^
-	{
-		it(@"should return the first object when there are objects in the receiver", ^
-		{
-			[[[@[@1, @2, @3] first] should] equal:@1];
-		});
-		
-		it(@"should return nil when there are no objects in the array", ^
-		{
-			[[[@[] first] should] beNil];
-		});
-	});
-	
 	context(@"first with condition", ^
 	{
 		it(@"should return the first matching object if there are objects matching the condition in the array", ^
@@ -54,19 +41,6 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@1, @"Foo"];
 			[[[objects first:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; } orDefault:@"Default"] should] equal:@"Default"];
-		});
-	});
-	
-	context(@"last", ^
-	{
-		it(@"should return the last object when there are objects in the receiver", ^
-		{
-			[[[@[@1, @2, @3] last] should] equal:@3];
-		});
-		
-		it(@"should return nil when there are no objects in the array", ^
-		{
-			[[[@[] last] should] beNil];
 		});
 	});
 	

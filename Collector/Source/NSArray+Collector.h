@@ -37,13 +37,6 @@ typedef id (^GatheringBlock)(id object);
 #pragma mark Block-based Array Manipulation and Filtering
 
 /**
- *  Obtains the first object in the array. Equivalent to -firstObject.
- *
- *  @return The first object in the array, or nil if the array is empty.
- */
-- (id)first;
-
-/**
  *  Returns the first object that matches *condition* or nil if no object matches the condition.
  *
  *  @param condition A block that tests a single object for match.
@@ -59,13 +52,6 @@ typedef id (^GatheringBlock)(id object);
  *  @param defaultObject The object that gets returned if no object was found.
  */
 - (id)first:(ConditionBlock)condition orDefault:(id)defaultObject;
-
-/**
- *  Obtains the last object in the array. Equivalent to -lastObject.
- *
- *  @return The last object in the array, or nil if the array is empty.
- */
-- (id)last;
 
 /**
  *  Returns the last object that matches a condition.

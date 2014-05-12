@@ -26,12 +26,6 @@
 
 #pragma mark Block-based Array Manipulation and Filtering
 
-- (id)first
-{
-	if ([self count] == 0) return nil;
-	return self[0];
-}
-
 - (id)first:(ConditionBlock)condition
 {
 	for (id object in self)
@@ -43,11 +37,6 @@
 - (id)first:(ConditionBlock)condition orDefault:(id)defaultObject
 {
 	return [self first:condition] ?: defaultObject;
-}
-
-- (id)last
-{
-	return [self lastObject];
 }
 
 - (id)last:(ConditionBlock)condition
