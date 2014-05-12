@@ -106,16 +106,84 @@ typedef id (^GatheringBlock)(id object);
  */
 - (instancetype)map:(GatheringBlock)gatheringBlock;
 
+/**
+ *  Eliminates duplicates from an array by comparing objects together using -isEqual:.
+ *
+ *  @return A new array containing only distinct objects (no duplicates).
+ */
+- (instancetype)distinct;
 
-- (instancetype)distinct; // Returns a new collection where all duplicate objects have been eliminated
-- (instancetype)distinct:(GatheringBlock)valueBlock; // Returns objects from the source collection, eliminating duplicates based on the given block
-- (instancetype)objectsInRange:(NSRange)range; // Returns objects in the specified array range
-- (instancetype)objectsOfKind:(Class)kind; // Returns all objects of the specified type
-- (id)reduce:(id(^)(id cumulated, id object))reducingBlock; // Returns a single value by applying the block to all elements and accumulating the results
-- (id)reduceWithSeed:(id)seed block:(id(^)(id cumulated, id object))reducingBlock; // Same as reduce: but with an initial "seed" value
-- (instancetype)each:(OperationBlock)operation; // Iterates over each array item and returns the original array as a convenience
-- (instancetype)eachWithIndex:(void(^)(id object, NSUInteger index))operation; // Iterates over each array item and exposes the current id through the block
-- (id)compare:(id(^)(id object1, id object2))comparisonBlock; // Returns the object that wins the comparison against all other array objects
+/**
+ *  Eliminates duplicates from an array by comparing the return value of *valueBlock* instead of comparing objects directly.
+ *  For example, given an array that contains Person objects and a *valueBlock* that returns a person's first name, the resulting
+ *  array would contain only one Person object per distinct first name.
+ *
+ *  @param valueBlock A block that returns the value to use for comparison..
+ *
+ *  @return A new array containing only one object per distinct value returned from *valueBlock*.
+ */
+- (instancetype)distinct:(GatheringBlock)valueBlock;
+
+/**
+ *  Obtains a range of objects from the array.
+ *
+ *  @param range The range of objects to obtain.
+ *
+ *  @return A new array containing the objects for the given range in the receiver.
+ */
+- (instancetype)objectsInRange:(NSRange)range;
+
+/**
+ *  Returns all objects whose class is the same as the specified kind.
+ *
+ *  @param kind The class of objects to obtain from the receiver.
+ *
+ *  @return A new array containing all objects that are of the given kind.
+ */
+- (instancetype)objectsOfKind:(Class)kind;
+
+/**
+ *  Returns a single value by applying the block to all of the receiver's objects in sequence and cumulating the results.
+ *  The *cumulated* block parameter is nil for the first block invocation.
+ *
+ *  @param reducingBlock A block that returns the cumulated value at each iteration.
+ *  @param cumulated The last value that was returned from *reducingBlock*.
+ *  @param object The current array object.
+ *
+ *  @return The cumulated value after invoking *reducingBlock* on each of the receiver's objects.
+ */
+- (id)reduce:(id(^)(id cumulated, id object))reducingBlock;
+
+/**
+ *  Same as -reduce: but with an initial seed value.
+ */
+- (id)reduceWithSeed:(id)seed block:(id(^)(id cumulated, id object))reducingBlock;
+
+/**
+ *  Iterates over each object and performs the given operation with each object as an argument.
+ *  Equivalent to a *for each* but makes for a clean one-liner when iterating over array elements.
+ *
+ *  @param operation The operation to perform for each of the array's objects.
+ */
+- (void)each:(OperationBlock)operation;
+
+/**
+ *  Iterates over each object and performs the given operation with each object and the current index as arguments.
+ *  Useful when you care both about the current object and that object's index in the array.
+ *
+ *  @param operation The operation to perform for each of the array's objects.
+ */
+- (void)eachWithIndex:(void(^)(id object, NSUInteger index))operation;
+
+/**
+ *  Compares all array objects using the given *comparisonBlock* and returns the final winner.
+ *
+ *  @param comparisonBlock The comparison operation to determine the winner between any two objects.
+ *
+ *  @return The object that wins the comparison against all other array objects.
+ */
+- (id)winner:(id(^)(id object1, id object2))comparisonBlock;
+
 - (BOOL)all:(ConditionBlock)testBlock; // Tests each array object and returns YES only when all objects pass the test
 - (BOOL)any:(ConditionBlock)testBlock; // Tests each array object and returns YES if at least one of the objects passes the test
 - (BOOL)none:(ConditionBlock)testBlock; // Tests each array object and returns YES only if no object passes the test

@@ -145,25 +145,21 @@
 	return result;
 }
 
-- (instancetype)each:(OperationBlock)operation
+- (void)each:(OperationBlock)operation
 {
 	for (id obj in self)
 		operation(obj);
-	
-	return self;
 }
 
-- (instancetype)eachWithIndex:(void(^)(id object, NSUInteger index))operation
+- (void)eachWithIndex:(void(^)(id object, NSUInteger index))operation
 {
 	[self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop)
 	{
 		operation(object, index);
 	}];
-	
-	return self;
 }
 
-- (id)compare:(id(^)(id object1, id object2))comparisonBlock
+- (id)winner:(id(^)(id object1, id object2))comparisonBlock
 {
 	if ([self count] == 0) return nil;
 	if ([self count] == 1) return self[0];
