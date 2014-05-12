@@ -61,7 +61,7 @@ describe(@"NSArray+Collector", ^
 	{
 		it(@"should return the last object when there are objects in the receiver", ^
 		{
-			[[[@[@1, @2, @3] first] should] equal:@3];
+			[[[@[@1, @2, @3] last] should] equal:@3];
 		});
 		
 		it(@"should return nil when there are no objects in the array", ^
@@ -107,6 +107,36 @@ describe(@"NSArray+Collector", ^
 			NSArray *objects = @[@1, @2, @"Three", @4];
 			NSArray *expectedObjects = @[@1, @2, @4];
 			[[[objects where:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }] should] equal:expectedObjects];
+		});
+	});
+	
+	context(@"map", ^
+	{
+		it(@"should return an array containing objects returned from the gathering block", ^
+		{
+			NSArray *objects = @[@"A", @"B", @"C"];
+			NSArray *expectedObjects = @[@"A-hello", @"B-hello", @"C-hello"];
+			
+			NSArray *resultingObjects = [objects map:^id(NSString *string)
+			{
+				return [string stringByAppendingString:@"-hello"];
+			}];
+			
+			[[resultingObjects should] equal:expectedObjects];
+		});
+		
+		it(@"should return fewer elements when nil is returned from the gathering block", ^
+		{
+			NSArray *objects = @[@"A", @"B", @"C"];
+			NSArray *expectedObjects = @[@"A-hello", @"C-hello"];
+			
+			NSArray *resultingObjects = [objects map:^id(NSString *string)
+			{
+				if ([string isEqualToString:@"B"]) return nil;
+				return [string stringByAppendingString:@"-hello"];
+			}];
+			
+			[[resultingObjects should] equal:expectedObjects];
 		});
 	});
 });
