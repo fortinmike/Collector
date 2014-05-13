@@ -180,7 +180,12 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"except", ^
 	{
+		NSArray *strings = @[@"A", @"B", @"C"];
 		
+		NSArray *filtered = [strings except:^BOOL(NSString *string) { return [string isEqualToString:@"A"]; }];
+		
+		[[filtered shouldNot] contain:@"A"];
+		[[theValue([filtered count]) should] equal:theValue(2)];
 	});
 	
 	context(@"take", ^
