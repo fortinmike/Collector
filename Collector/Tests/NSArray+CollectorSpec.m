@@ -148,12 +148,12 @@ describe(@"NSArray+Collector", ^
 	{
 		it(@"should iterate over all array elements", ^
 		{
-			NSArray *strings = @[@"A", @"B", @"C"];
+			NSArray *objects = @[@"A", @"B", @"C"];
 			
 			NSMutableArray *cumulated = [NSMutableArray array];
-			[strings each:^(NSMutableString *string) { [cumulated addObject:string]; }];
+			[objects each:^(NSMutableString *string) { [cumulated addObject:string]; }];
 			
-			[[cumulated should] equal:strings];
+			[[cumulated should] equal:objects];
 		});
 	});
 	
@@ -161,19 +161,19 @@ describe(@"NSArray+Collector", ^
 	{
 		it(@"should iterate over all array elements with the proper index", ^
 		{
-			NSArray *strings = @[@"A", @"B", @"C"];
+			NSArray *objects = @[@"A", @"B", @"C"];
 			NSArray *expectedIndexes = @[@0, @1, @2];
 			
 			NSMutableArray *cumulated = [NSMutableArray array];
 			NSMutableArray *indexes = [NSMutableArray array];
 			
-			[strings eachWithIndex:^(NSMutableString *string, NSUInteger index)
+			[objects eachWithIndex:^(NSMutableString *string, NSUInteger index)
 			{
 				[cumulated addObject:string];
 				[indexes addObject:@(index)];
 			}];
 			
-			[[cumulated should] equal:strings];
+			[[cumulated should] equal:objects];
 			[[indexes should] equal:expectedIndexes];
 		});
 	});
@@ -190,7 +190,33 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"take", ^
 	{
+		it(@"should return no object when asked for zero objects", ^
+		{
+			NSArray *objects = @[@"A", @"B", @"C"];
+
+			NSArray *taken = [objects take:0];
+			
+			[[taken should] beKindOfClass:[NSArray class]];
+			[[theValue([taken count]) should] equal:theValue(0)];
+		});
 		
+		it(@"should return the maximum amount of objects when there are enough items in the array", ^
+		{
+			NSArray *objects = @[@"A", @"B", @"C"];
+			
+			NSArray *taken = [objects take:2];
+			
+			[[taken should] equal:@[@"A", @"B"]];
+		});
+		
+		it(@"should return less objects when there are not enough objects in the array", ^
+		{
+			NSArray *objects = @[@"A", @"B", @"C"];
+			
+			NSArray *taken = [objects take:15];
+			
+			[[taken should] equal:@[@"A", @"B", @"C"]];
+		});
 	});
 	
 	context(@"distinct", ^
