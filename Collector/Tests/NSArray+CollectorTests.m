@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSArray+CollectorTests.h"
 #import "NSArray+Collector.h"
+#import "NSArray+Sorting.h"
 
 @implementation NSArray_CollectorTests
 

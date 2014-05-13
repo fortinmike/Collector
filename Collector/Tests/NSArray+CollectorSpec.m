@@ -146,7 +146,15 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"each", ^
 	{
-		
+		it(@"should iterate over all array elements", ^
+		{
+			NSArray *strings = @[@"A", @"B", @"C"];
+			
+			NSMutableArray *cumulated = [NSMutableArray array];
+			[strings each:^(NSMutableString *string) { [cumulated addObject:string]; }];
+			
+			[[cumulated should] equal:strings];
+		});
 	});
 	
 	context(@"each with index", ^
