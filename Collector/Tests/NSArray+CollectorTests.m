@@ -32,14 +32,6 @@
 
 #pragma mark Test Cases
 
-- (void)testEach
-{
-	NSMutableArray *cumulated = [NSMutableArray array];
-	[[self strings] each:^(NSMutableString *string) { [cumulated addObject:string]; }];
-	
-	XCTAssertEqualObjects(cumulated, [self strings]);
-}
-
 - (void)testAll
 {
 	NSArray *disparateObjects = [self disparateObjects];
@@ -47,23 +39,6 @@
 	
 	XCTAssertFalse([disparateObjects all:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }]);
 	XCTAssertTrue([numbers all:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }]);
-}
-
-- (void)testEachWithIndex
-{
-	NSArray *expectedIndexes = @[@0, @1, @2];
-	
-	NSMutableArray *objects = [NSMutableArray array];
-	NSMutableArray *indexes = [NSMutableArray array];
-	
-	[[self strings] eachWithIndex:^(NSMutableString *string, NSUInteger index)
-	{
-		[objects addObject:string];
-		[indexes addObject:@(index)];
-	}];
-	
-	XCTAssertEqualObjects(objects, [self strings]);
-	XCTAssertEqualObjects(indexes, expectedIndexes);
 }
 
 - (void)testOrderByAscendingNumbers

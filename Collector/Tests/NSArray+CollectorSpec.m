@@ -159,7 +159,23 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"each with index", ^
 	{
-		
+		it(@"should iterate over all array elements with the proper index", ^
+		{
+			NSArray *strings = @[@"A", @"B", @"C"];
+			NSArray *expectedIndexes = @[@0, @1, @2];
+			
+			NSMutableArray *cumulated = [NSMutableArray array];
+			NSMutableArray *indexes = [NSMutableArray array];
+			
+			[strings eachWithIndex:^(NSMutableString *string, NSUInteger index)
+			{
+				[cumulated addObject:string];
+				[indexes addObject:@(index)];
+			}];
+			
+			[[cumulated should] equal:strings];
+			[[indexes should] equal:expectedIndexes];
+		});
 	});
 	
 	context(@"except", ^
