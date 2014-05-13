@@ -221,7 +221,20 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"distinct", ^
 	{
+		it(@"should keep only once instance for equal objects", ^
+		{
+			NSArray *objects = @[@"A", @"A", @"B", @"C", @"C"];
+			
+			[[[objects distinct] should] equal:@[@"A", @"B", @"C"]];
+		});
 		
+		it(@"should keep only one instance given the same instance multiple times", ^
+		{
+			NSString *instance = @"B";
+			NSArray *objects = @[@"A", instance, @"C", instance];
+			
+			[[[objects distinct] should] equal:@[@"A", @"B", @"C"]];
+		});
 	});
 	
 	context(@"distinct with value block", ^
