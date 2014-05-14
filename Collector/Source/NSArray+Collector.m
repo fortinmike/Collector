@@ -137,7 +137,7 @@
 	return [self reduceWithSeed:[NSMutableArray array] block:^id(NSMutableArray *cumulated, id object)
 	{
 		id value = valueBlock(object);
-		BOOL objectAlreadyInArray = [cumulated none:^(id tested) { return [valueBlock(tested) isEqual:value]; }];
+		BOOL objectAlreadyInArray = [cumulated any:^(id tested) { return [valueBlock(tested) isEqual:value]; }];
 		if (!objectAlreadyInArray) [cumulated addObject:object];
 		return cumulated;
 	}];
