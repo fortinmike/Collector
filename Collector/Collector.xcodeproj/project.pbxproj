@@ -42,6 +42,8 @@
 		4CC18D4719145C9B00CEECEC /* Collector-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */; };
 		4CDD634E19231DF600936B49 /* NSArray+SortingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */; };
 		4CDD634F19231DF600936B49 /* NSArray+SortingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */; };
+		4CDD635119232E7800936B49 /* Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDD635019232E7800936B49 /* Collector.h */; };
+		4CDD635219232E7800936B49 /* Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDD635019232E7800936B49 /* Collector.h */; };
 		4CECFCF319145E540022AA2A /* Collector-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */; };
 		77A5CEDC863C43E087A7947A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
 		AE4B39FA553B48B2B35A0F47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
@@ -96,6 +98,7 @@
 		4CC252DC191C1E7300E49DF7 /* Collector.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Collector.podspec; path = ../Collector.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4CC252DD191C1E7300E49DF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SortingSpec.m"; sourceTree = "<group>"; };
+		4CDD635019232E7800936B49 /* Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,7 @@
 		4CC18D4319145C9B00CEECEC /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4CDD635019232E7800936B49 /* Collector.h */,
 				4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */,
 				4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */,
 				4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */,
@@ -238,6 +242,7 @@
 				4C4AA7001920150F008FB311 /* NSArray+Collector.h in Headers */,
 				4C4AA7241920826A008FB311 /* CollectorBlockTypes.h in Headers */,
 				4C4AA70619201B50008FB311 /* NSArray+Numbers.h in Headers */,
+				4CDD635219232E7800936B49 /* Collector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +256,7 @@
 				4C4AA6FF1920150F008FB311 /* NSArray+Collector.h in Headers */,
 				4C4AA7231920826A008FB311 /* CollectorBlockTypes.h in Headers */,
 				4C4AA70519201B50008FB311 /* NSArray+Numbers.h in Headers */,
+				4CDD635119232E7800936B49 /* Collector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
