@@ -251,7 +251,21 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"objects in range", ^
 	{
+		it(@"should return the correct objects", ^
+		{
+			NSArray *objects = @[@1, @2, @3, @4];
+			
+			NSArray *obtained = [objects objectsInRange:NSMakeRange(1, 2)];
+			
+			[[obtained should] equal:@[@2, @3]];
+		});
 		
+		it(@"should throw if the range exceeds the array's bounds", ^
+		{
+			NSArray *objects = @[@1, @2, @3, @4];
+			
+			[[theBlock(^{ [objects objectsInRange:NSMakeRange(1, 30)]; }) should] raise];
+		});
 	});
 	
 	context(@"objects of kind", ^
