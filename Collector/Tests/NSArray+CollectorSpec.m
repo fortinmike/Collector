@@ -374,7 +374,16 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"count with block", ^
 	{
-		
+		it(@"should return the number of objects that match the given condition", ^
+		{
+			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
+			
+			NSUInteger numberOfStrings = [objects count:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			NSUInteger numberOfNumbers = [objects count:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }];
+			
+			[[theValue(numberOfStrings) should] equal:theValue(3)];
+			[[theValue(numberOfNumbers) should] equal:theValue(4)];
+		});
 	});
 });
 
