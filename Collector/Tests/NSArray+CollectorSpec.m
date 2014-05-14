@@ -353,7 +353,23 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"none", ^
 	{
+		it(@"should return YES when no object matches the condition", ^
+		{
+			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
+			
+			BOOL anyObjectIsData = [objects none:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }];
+			
+			[[theValue(anyObjectIsData) should] beYes];
+		});
 		
+		it(@"should return NO when at least one object matches the condition", ^
+		{
+			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
+			
+			BOOL anyObjectIsAString = [objects none:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			
+			[[theValue(anyObjectIsAString) should] beNo];
+		});
 	});
 	
 	context(@"count with block", ^
