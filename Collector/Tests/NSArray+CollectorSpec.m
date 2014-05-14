@@ -270,7 +270,16 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"objects of kind", ^
 	{
-		
+		it(@"should return only objects of the specified kind", ^
+		{
+			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
+			
+			NSArray *strings = [objects objectsOfKind:[NSString class]];
+			NSArray *numbers = [objects objectsOfKind:[NSNumber class]];
+			
+			[[strings should] equal:@[@"A", @"B", @"C"]];
+			[[numbers should] equal:@[@1, @2, @3, @4]];
+		});
 	});
 	
 	context(@"winner", ^
