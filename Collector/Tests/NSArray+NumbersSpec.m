@@ -24,6 +24,18 @@ describe(@"NSArray+Numbers", ^
 		});
 	});
 	
+	context(@"min with number block", ^
+	{
+		it(@"should return the object that has the lowest block-returned value in the array", ^
+		{
+			NSArray *numbers = @[@[@1], @[@5], @[@10], @[@3], @[@(-1)]];
+			
+			NSNumber *min = [numbers min:^NSNumber *(id object) { return [object firstObject]; }];
+			
+			[[min should] equal:@[@(-1)]];
+		});
+	});
+	
 	context(@"max", ^
 	{
 		it(@"should return the instance of NSNumber with the highest value in the array", ^
@@ -31,6 +43,18 @@ describe(@"NSArray+Numbers", ^
 			NSArray *numbers = @[@1, @5, @10, @3, @(-1), @22, @1, @55, @3.2];
 			
 			[[[numbers max] should] equal:@(55)];
+		});
+	});
+	
+	context(@"max with number block", ^
+	{
+		it(@"should return the object that has the highest block-returned value in the array", ^
+		{
+			NSArray *numbers = @[@[@1], @[@5], @[@10], @[@3], @[@(-1)]];
+			
+			NSNumber *min = [numbers max:^NSNumber *(id object) { return [object firstObject]; }];
+			
+			[[min should] equal:@[@(10)]];
 		});
 	});
 	

@@ -11,6 +11,7 @@
 
 typedef void (^OperationBlock)(id object);
 typedef BOOL (^ConditionBlock)(id object);
-typedef id (^GatheringBlock)(id object);
+typedef id (^ValueBlock)(id object);
+typedef NSNumber * (^NumberBlock)(id object);
 
 #endif

@@ -15,17 +15,27 @@
 
 - (NSNumber *)min
 {
-	return [self winner:^id(NSNumber *num1, NSNumber *num2)
-	{
-		return (([num1 compare:num2] == NSOrderedAscending) ? num1 : num2);
-	}];
+	return [self min:^id(NSNumber *number) { return number; }];
 }
 
 - (NSNumber *)max
 {
-	return [self winner:^id(NSNumber *num1, NSNumber *num2)
+	return [self max:^id(NSNumber *number) { return number; }];
+}
+
+- (NSNumber *)min:(NumberBlock)numberBlock
+{
+	return [self winner:^id(id obj1, id obj2)
 	{
-		return (([num1 compare:num2] == NSOrderedDescending) ? num1 : num2);
+		return (([numberBlock(obj1) compare:numberBlock(obj2)] == NSOrderedAscending) ? obj1 : obj2);
+	}];
+}
+
+- (NSNumber *)max:(NumberBlock)numberBlock
+{
+	return [self winner:^id(id obj1, id obj2)
+	{
+		return (([numberBlock(obj1) compare:numberBlock(obj2)] == NSOrderedDescending) ? obj1 : obj2);
 	}];
 }
 

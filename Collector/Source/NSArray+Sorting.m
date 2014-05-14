@@ -31,7 +31,7 @@
 	return shuffled;
 }
 
-- (instancetype)orderedByAscending:(GatheringBlock)valueBlock
+- (instancetype)orderedByAscending:(ValueBlock)valueBlock
 {
 	NSArray *sorted = [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2)
 	{
@@ -68,7 +68,7 @@
 	return [sorted mutableCopy];
 }
 
-- (instancetype)orderedByDescending:(GatheringBlock)valueBlock
+- (instancetype)orderedByDescending:(ValueBlock)valueBlock
 {
 	return [[self orderedByAscending:valueBlock] reversed];
 }

@@ -62,13 +62,13 @@
 	return selectedObjects;
 }
 
-- (instancetype)map:(GatheringBlock)gatheringBlock
+- (instancetype)map:(ValueBlock)valueBlock
 {
 	NSMutableArray *values = [NSMutableArray array];
 	
 	for (id obj in self)
 	{
-		id value = gatheringBlock(obj);
+		id value = valueBlock(obj);
 		if (value != nil) [values addObject:value];
 	}
 	
@@ -132,7 +132,7 @@
 	return distinct;
 }
 
-- (instancetype)distinct:(GatheringBlock)valueBlock
+- (instancetype)distinct:(ValueBlock)valueBlock
 {
 	return [self reduceWithSeed:[NSMutableArray array] block:^id(NSMutableArray *cumulated, id object)
 	{

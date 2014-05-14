@@ -33,7 +33,7 @@
  *
  *  @return A new array with the same items as the receiver but sorted in ascending order based on the values returned from *valueBlock*.
  */
-- (instancetype)orderedByAscending:(GatheringBlock)valueBlock;
+- (instancetype)orderedByAscending:(ValueBlock)valueBlock;
 
 /**
  *  Returns the array items in descending order based on the value returned by the block.
@@ -43,6 +43,6 @@
  *
  *  @return A new array with the same items as the receiver but sorted in descending order based on the values returned from *valueBlock*.
  */
-- (instancetype)orderedByDescending:(GatheringBlock)valueBlock;
+- (instancetype)orderedByDescending:(ValueBlock)valueBlock;
 
 @end

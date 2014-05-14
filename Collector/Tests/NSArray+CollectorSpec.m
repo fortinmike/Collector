@@ -290,7 +290,7 @@ describe(@"NSArray+Collector", ^
 			
 			NSNumber *winner = [objects winner:^NSNumber *(NSNumber *nb1, NSNumber *nb2)
 			{
-				return [nb1 compare:nb2] == NSOrderedAscending ? nb2 : nb1;
+				return [nb1 compare:nb2] == NSOrderedDescending ? nb1 : nb2;
 			}];
 			
 			[[winner should] equal:@4];

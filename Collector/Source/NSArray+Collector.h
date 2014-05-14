@@ -84,7 +84,7 @@
  *
  *  @return An array containing all objects returned from invocations of the gathering block.
  */
-- (instancetype)map:(GatheringBlock)gatheringBlock;
+- (instancetype)map:(ValueBlock)gatheringBlock;
 
 /**
  *  Returns a single value by applying the block to all of the receiver's objects in sequence and cumulating the results.
@@ -153,7 +153,7 @@
  *
  *  @return A new array containing only one object per distinct value returned from *valueBlock*.
  */
-- (instancetype)distinct:(GatheringBlock)valueBlock;
+- (instancetype)distinct:(ValueBlock)valueBlock;
 
 /**
  *  Obtains a range of objects from the array.
