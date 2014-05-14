@@ -221,7 +221,7 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"distinct", ^
 	{
-		it(@"should keep only once instance for equal objects", ^
+		it(@"should keep only one instance for equal objects", ^
 		{
 			NSArray *objects = @[@"A", @"A", @"B", @"C", @"C"];
 			
@@ -239,7 +239,14 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"distinct with value block", ^
 	{
-		
+		it(@"should keep only one instace for each distinct value returned by the value block", ^
+		{
+			NSArray *objects = @[@"A", @"A", @1, @"C", @2];
+			
+			NSArray *distinctObjects = [objects distinct:^id(id object) { return [object class]; }];
+			
+			[[distinctObjects should] equal:@[@"A", @1]];
+		});
 	});
 	
 	context(@"objects in range", ^
