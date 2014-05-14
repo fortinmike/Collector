@@ -13,23 +13,6 @@
 
 @implementation NSArray_CollectorTests
 
-#pragma mark Convenience Methods
-
-- (NSArray *)disparateObjects
-{
-	return @[@8, @"Test", @9.3, @{@"Key": @"Value1"}, @{@"Special": @"Value2"}, @"Another string"];
-}
-
-- (NSArray *)numbers
-{
-	return @[@9.0, @10, @91, @12, @234];
-}
-
-- (NSArray *)strings
-{
-	return @[@"String1", @"String2", @"String3"];
-}
-
 #pragma mark Test Cases
 
 - (void)testOrderByAscendingNumbers
