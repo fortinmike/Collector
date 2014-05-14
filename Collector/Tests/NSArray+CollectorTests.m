@@ -32,15 +32,6 @@
 
 #pragma mark Test Cases
 
-- (void)testAll
-{
-	NSArray *disparateObjects = [self disparateObjects];
-	NSArray *numbers = [self numbers];
-	
-	XCTAssertFalse([disparateObjects all:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }]);
-	XCTAssertTrue([numbers all:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }]);
-}
-
 - (void)testOrderByAscendingNumbers
 {
 	NSArray *numbers = @[@1, @5, @10, @3, @(-1), @22, @1, @55, @3.2];

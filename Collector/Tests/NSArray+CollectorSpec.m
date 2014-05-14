@@ -284,12 +284,50 @@ describe(@"NSArray+Collector", ^
 	
 	context(@"winner", ^
 	{
+		it(@"should return the winner when there is a single object that can win according to the condition", ^
+		{
+			NSArray *objects = @[@1, @4, @2, @3];
+			
+			NSNumber *winner = [objects winner:^NSNumber *(NSNumber *nb1, NSNumber *nb2)
+			{
+				return [nb1 compare:nb2] == NSOrderedAscending ? nb2 : nb1;
+			}];
+			
+			[[winner should] equal:@4];
+		});
 		
+		it(@"should return an object when multiple objects could win", ^
+		{
+			NSArray *objects = @[@1, @4, @4, @3];
+			
+			NSNumber *winner = [objects winner:^NSNumber *(NSNumber *nb1, NSNumber *nb2)
+			{
+				return [nb1 compare:nb2] == NSOrderedAscending ? nb2 : nb1;
+			}];
+			
+			[[winner should] equal:@4];
+		});
 	});
 	
 	context(@"all", ^
 	{
+		it(@"should return YES when all objects match the condition", ^
+		{
+			NSArray *objects = @[@0, @1, @2, @3, @4];
+			
+			BOOL allObjectsAreNumbers = [objects all:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }];
+			
+			[[theValue(allObjectsAreNumbers) should] beYes];
+		});
 		
+		it(@"should return NO when one or more objects don't match the condition", ^
+		{
+			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
+			
+			BOOL allObjectsAreStrings = [objects all:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			
+			[[theValue(allObjectsAreStrings) should] beNo];
+		});
 	});
 	
 	context(@"any", ^
