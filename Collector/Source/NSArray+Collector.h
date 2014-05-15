@@ -117,7 +117,7 @@
  *
  *  @param operation The operation to perform for each of the array's objects.
  */
-- (void)ct_eachWithIndex:(void(^)(id object, NSUInteger index))operation;
+- (void)ct_eachWithIndex:(void(^)(id object, NSUInteger index, BOOL *stop))operation;
 
 /**
  *  Selects all objects but those that match the specified condition.

@@ -101,11 +101,11 @@
 		operation(obj);
 }
 
-- (void)ct_eachWithIndex:(void(^)(id object, NSUInteger index))operation
+- (void)ct_eachWithIndex:(void(^)(id object, NSUInteger index, BOOL *stop))operation
 {
 	[self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop)
 	{
-		operation(object, index);
+		operation(object, index, stop);
 	}];
 }
 
