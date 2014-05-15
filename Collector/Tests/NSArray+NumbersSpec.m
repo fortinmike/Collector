@@ -67,6 +67,18 @@ describe(@"NSArray+Numbers", ^
 			[[[numbers ct_sum] should] equal:99.2 withDelta:FLT_EPSILON];
 		});
 	});
+	
+	context(@"sum with number block", ^
+	{
+		it(@"should return the sum of all values returned by the block", ^
+		{
+			NSArray *numbers = @[@[@1], @[@5], @[@10], @[@3.2]];
+			
+			NSNumber *sum = [numbers ct_sum:^NSNumber *(NSArray *array) { return [array firstObject]; }];
+			
+			[[sum should] equal:19.2 withDelta:FLT_EPSILON];
+		});
+	});
 });
 
 SPEC_END

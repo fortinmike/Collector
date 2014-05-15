@@ -41,9 +41,17 @@
 
 - (NSNumber *)ct_sum
 {
-	return [self ct_reduceWithSeed:@(0) block:^id(NSNumber *cumulated, NSNumber *number)
+	return [self ct_reduce:^id(NSNumber *cumulated, NSNumber *number)
 	{
 		return @([cumulated doubleValue] + [number doubleValue]);
+	}];
+}
+
+- (NSNumber *)ct_sum:(CollectorNumberBlock)numberBlock
+{
+	return [self ct_reduceWithSeed:@0 block:^id(NSNumber *cumulated, id object)
+	{
+		return @([cumulated doubleValue] + [numberBlock(object) doubleValue]);
 	}];
 }
 

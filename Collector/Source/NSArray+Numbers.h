@@ -23,7 +23,7 @@
 
 /**
  *  Making no assumption about array contents, this method provides a block from which an
- *  NSNumber must be returned. The object that is returned from -min: is the object for
+ *  NSNumber must be returned. The object that is returned from this method is the object for
  *  which *numberBlock* returns the lowest value.
  *
  *  @return the object where *numberBlock* returns the lowest value.
@@ -40,10 +40,10 @@
 
 /**
  *  Making no assumption about array contents, this method provides a block from which an
- *  NSNumber must be returned. The object that is returned from -max: is the object for
+ *  NSNumber must be returned. The object that is returned from this method is the object for
  *  which *numberBlock* returns the highest value.
  *
- *  @return the object where *numberBlock* returns the highest value.
+ *  @return The object where *numberBlock* returns the highest value.
  */
 - (NSNumber *)ct_max:(CollectorNumberBlock)numberBlock;
 
@@ -54,5 +54,13 @@
  *  @return The sum of all NSNumber instances in the array.
  */
 - (NSNumber *)ct_sum;
+
+/**
+ *  Making no assumption about array contents, this method provides a block from which an
+ *  NSNumber must be returned. Returns the sum of all values returned from *numberBlock*.
+ *
+ *  @return The sum of all values returned by *numberBlock*.
+ */
+- (NSNumber *)ct_sum:(CollectorNumberBlock)numberBlock;
 
 @end
