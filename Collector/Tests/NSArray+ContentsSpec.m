@@ -12,46 +12,86 @@
 
 SPEC_BEGIN(NSArray_ContentsSpec)
 
-//- (void)testContainsEqual
-//{
-//	XCTAssertTrue([[self disparateObjects] containsEqual:@8], @"Object in array but not found by containsEqual:!");
-//	XCTAssertFalse([[self disparateObjects] containsEqual:@"NOT_IN_THE_ARRAY"], @"containsEqual: says that an object is in the array but it is not!");
-//}
-//
-//- (void)testContainsEqualObjects
-//{
-//	NSArray *array1 = @[@"Object1", @"Object2", @"Object3"];
-//	NSArray *array2 = @[@"Object3", @"Object1", @"Object2"];
-//	NSArray *array3 = @[@"ObjectDifferent", @"Object1", @"Object2"];
-//	NSArray *array4 = @[@"Object1", @"Object2", @"Object3", @"Object4"];
-//	XCTAssertTrue([array1 containsEqualObjects:array2], @"Arrays contain equal objects but method returned NO");
-//	XCTAssertFalse([array1 containsEqualObjects:array3], @"Arrays do not contain all equal objects");
-//	XCTAssertFalse([array1 containsEqualObjects:array4], @"Receiver does not contain all objects from array");
-//	XCTAssertTrue([array4 containsEqualObjects:array1], @"Receiver contains all objects from array");
-//}
-//
-//- (void)testContainsOnlyEqualObjects
-//{
-//	NSArray *array1 = @[@"Object1", @"Object2", @"Object3"];
-//	NSArray *array2 = @[@"Object3", @"Object1", @"Object2"];
-//	NSArray *array3 = @[@"ObjectDifferent", @"Object1", @"Object2"];
-//	NSArray *array4 = @[@"Object1", @"Object2", @"Object 3", @"Object4"];
-//	XCTAssertTrue([array1 containsOnlyEqualObjects:array2], @"Arrays contain equal objects but method returned NO");
-//	XCTAssertFalse([array1 containsOnlyEqualObjects:array3], @"Arrays do not contain all equal objects");
-//	XCTAssertFalse([array1 containsOnlyEqualObjects:array4], @"Arrays do not contain the same number of objects so we shouldn't return YES");
-//	XCTAssertFalse([array4 containsOnlyEqualObjects:array1], @"Arrays do not contain the same number of objects so we shouldn't return YES");
-//}
-//
-//- (void)testAreObjectsKindOfClass
-//{
-//	XCTAssertFalse([[self disparateObjects] areObjectsKindOfClass:[NSNumber class]]);
-//	XCTAssertTrue([[self numbersArray] areObjectsKindOfClass:[NSNumber class]]);
-//	XCTAssertFalse([[self numbersArray] areObjectsKindOfClass:[NSString class]]);
-//}
-
 describe(@"NSArray+Contents", ^
 {
+	context(@"contains equal objects", ^
+	{
+		it(@"should return YES when the given array's objects are all found in the receiver", ^
+		{
+			NSArray *array1 = @[@1, @2, @3];
+			NSArray *array2 = @[@3, @1, @2];
+			NSArray *array3 = @[@1, @4, @3, @2];
+			
+			[[theValue([array1 ct_containsObjects:array2]) should] beYes];
+			[[theValue([array2 ct_containsObjects:array1]) should] beYes];
+			[[theValue([array3 ct_containsObjects:array1]) should] beYes];
+		});
+		
+		it(@"should return NO when some of the objects in the given array are not found in the receiver", ^
+		{
+			NSArray *array1 = @[@1, @2, @3];
+			NSArray *array2 = @[@50, @1, @2];
+			NSArray *array3 = @[@1, @4, @3, @2];
+			
+			[[theValue([array1 ct_containsObjects:array2]) should] beNo];
+			[[theValue([array1 ct_containsObjects:array3]) should] beNo];
+		});
+	});
 	
+	context(@"contains only objects", ^
+	{
+		it(@"should return YES when the receiver contains only the objects from the given array", ^
+		{
+			NSArray *array1 = @[@3, @1, @2];
+			NSArray *array2 = @[@1, @2, @3];
+			
+			[[theValue([array1 ct_containsOnlyObjects:array2]) should] beYes];
+		});
+		
+		it(@"should return NO when the receiver contains more than the objects from the givne array", ^
+		{
+			NSArray *array1 = @[@1, @4, @3, @2];
+			NSArray *array2 = @[@1, @2, @3];
+			
+			[[theValue([array1 ct_containsOnlyObjects:array2]) should] beNo];
+		});
+	});
+	
+	context(@"contains any object", ^
+	{
+		it(@"should return YES when at least one of the objects in the given array is found in the receiver", ^
+		{
+			NSArray *array1 = @[@1, @4, @3, @2];
+			NSArray *array2 = @[@50, @1, @60];
+			
+			[[theValue([array2 ct_containsAnyObject:array1]) should] beYes];
+		});
+		
+		it(@"should return NO when no object in the given array is found in the receiver", ^
+		{
+			NSArray *array1 = @[@1, @4, @3, @2];
+			NSArray *array2 = @[@50, @70, @60];
+			
+			[[theValue([array1 ct_containsAnyObject:array2]) should] beNo];
+		});
+	});
+	
+	context(@"are objects kind of class", ^
+	{
+		it(@"should return YES when all objects in the receiver are of the given class", ^
+		{
+			NSArray *array = @[@1, @2, @3];
+			
+			[[theValue([array ct_areObjectsKindOfClass:[NSNumber class]]) should] beYes];
+		});
+		
+		it(@"should return NO when one or more object in the receiver is not of the given class", ^
+		{
+			NSArray *array = @[@1, @2, @"3"];
+			
+			[[theValue([array ct_areObjectsKindOfClass:[NSNumber class]]) should] beNo];
+		});
+	});
 });
 
 SPEC_END
