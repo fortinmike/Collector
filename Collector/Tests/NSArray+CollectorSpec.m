@@ -167,7 +167,7 @@ describe(@"NSArray+Collector", ^
 			NSMutableArray *cumulated = [NSMutableArray array];
 			NSMutableArray *indexes = [NSMutableArray array];
 			
-			[objects ct_eachWithIndex:^(NSMutableString *string, NSUInteger index)
+			[objects ct_eachWithIndex:^(NSMutableString *string, NSUInteger index, BOOL *stop)
 			{
 				[cumulated addObject:string];
 				[indexes addObject:@(index)];
