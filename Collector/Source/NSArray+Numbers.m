@@ -18,17 +18,17 @@
 	return [self ct_min:^id(NSNumber *number) { return number; }];
 }
 
-- (NSNumber *)ct_max
-{
-	return [self ct_max:^id(NSNumber *number) { return number; }];
-}
-
 - (NSNumber *)ct_min:(CollectorNumberBlock)numberBlock
 {
 	return [self ct_winner:^id(id obj1, id obj2)
 	{
 		return (([numberBlock(obj1) compare:numberBlock(obj2)] == NSOrderedAscending) ? obj1 : obj2);
 	}];
+}
+
+- (NSNumber *)ct_max
+{
+	return [self ct_max:^id(NSNumber *number) { return number; }];
 }
 
 - (NSNumber *)ct_max:(CollectorNumberBlock)numberBlock
