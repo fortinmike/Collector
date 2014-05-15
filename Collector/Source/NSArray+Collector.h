@@ -20,7 +20,7 @@
  *
  *  @return A new array containing all of the receiver's objects but the ones that are equal to the given object.
  */
-- (instancetype)ct_arrayByRemovingObject:(id)object;
+- (NSArray *)ct_arrayByRemovingObject:(id)object;
 
 /**
  *  Returns an array that is the same as the receiver but with the given objects removed if they were present.
@@ -29,7 +29,7 @@
  *
  *  @return A new array containing all of the receiver's objects but the ones that are equal to the given objects.
  */
-- (instancetype)ct_arrayByRemovingObjectsFromArray:(NSArray *)array;
+- (NSArray *)ct_arrayByRemovingObjectsInArray:(NSArray *)array;
 
 #pragma mark Block-based Array Manipulation and Filtering
 
@@ -74,7 +74,7 @@
  *
  *  @return All objects that match the specified condition.
  */
-- (instancetype)ct_where:(CollectorConditionBlock)condition;
+- (NSArray *)ct_where:(CollectorConditionBlock)condition;
 
 /**
  *  Creates a new array containing the objects returned from the gathering block.
@@ -84,7 +84,7 @@
  *
  *  @return An array containing all objects returned from invocations of the gathering block.
  */
-- (instancetype)ct_map:(CollectorValueBlock)gatheringBlock;
+- (NSArray *)ct_map:(CollectorValueBlock)gatheringBlock;
 
 /**
  *  Returns a single value by applying the block to all of the receiver's objects in sequence and cumulating the results.
@@ -126,7 +126,7 @@
  *
  *  @return All objects that *don't* match the specified condition.
  */
-- (instancetype)ct_except:(CollectorConditionBlock)condition;
+- (NSArray *)ct_except:(CollectorConditionBlock)condition;
 
 /**
  *  Returns a given number of items from the array.
@@ -135,14 +135,14 @@
  *
  *  @return The first *[amount]* objects of the array or fewer objects if the array is smaller than the specified amount.
  */
-- (instancetype)ct_take:(NSUInteger)amount;
+- (NSArray *)ct_take:(NSUInteger)amount;
 
 /**
  *  Eliminates duplicates from an array by comparing objects together using -isEqual:.
  *
  *  @return A new array containing only distinct objects (no duplicates).
  */
-- (instancetype)ct_distinct;
+- (NSArray *)ct_distinct;
 
 /**
  *  Eliminates duplicates from an array by comparing the return value of *valueBlock* instead of comparing objects directly.
@@ -153,7 +153,7 @@
  *
  *  @return A new array containing only one object per distinct value returned from *valueBlock*.
  */
-- (instancetype)ct_distinct:(CollectorValueBlock)valueBlock;
+- (NSArray *)ct_distinct:(CollectorValueBlock)valueBlock;
 
 /**
  *  Obtains a range of objects from the array.
@@ -162,7 +162,7 @@
  *
  *  @return A new array containing the objects for the given range in the receiver.
  */
-- (instancetype)ct_objectsInRange:(NSRange)range;
+- (NSArray *)ct_objectsInRange:(NSRange)range;
 
 /**
  *  Returns all objects whose class is the same as the specified kind.
@@ -171,7 +171,7 @@
  *
  *  @return A new array containing all objects that are of the given kind.
  */
-- (instancetype)ct_objectsOfKind:(Class)kind;
+- (NSArray *)ct_objectsOfKind:(Class)kind;
 
 /**
  *  Compares all array objects using the given *comparisonBlock* and returns the final winner.

@@ -12,16 +12,16 @@
 
 #pragma mark Creating Other Instances
 
-- (instancetype)ct_arrayByRemovingObject:(id)object
+- (NSArray *)ct_arrayByRemovingObject:(id)object
 {
-	return [self ct_arrayByRemovingObjectsFromArray:@[object]];
+	return [self ct_arrayByRemovingObjectsInArray:@[object]];
 }
 
-- (instancetype)ct_arrayByRemovingObjectsFromArray:(NSArray *)array
+- (NSArray *)ct_arrayByRemovingObjectsInArray:(NSArray *)array
 {
 	NSMutableArray *newArray = [self mutableCopy];
 	[newArray removeObjectsInArray:array];
-	return [[self class] arrayWithArray:newArray];
+	return [newArray copy];
 }
 
 #pragma mark Block-based Array Manipulation and Filtering
@@ -49,7 +49,7 @@
 	return [self ct_last:condition] ?: defaultObject;
 }
 
-- (instancetype)ct_where:(CollectorConditionBlock)condition
+- (NSArray *)ct_where:(CollectorConditionBlock)condition
 {
 	NSMutableArray *selectedObjects = [NSMutableArray array];
 	
@@ -59,10 +59,10 @@
 			[selectedObjects addObject:obj];
 	}
 	
-	return selectedObjects;
+	return [selectedObjects copy];
 }
 
-- (instancetype)ct_map:(CollectorValueBlock)valueBlock
+- (NSArray *)ct_map:(CollectorValueBlock)valueBlock
 {
 	NSMutableArray *values = [NSMutableArray array];
 	
@@ -72,7 +72,7 @@
 		if (value != nil) [values addObject:value];
 	}
 	
-	return values;
+	return [values copy];
 }
 
 - (id)ct_reduce:(id(^)(id cumulated, id object))reducingBlock
@@ -109,17 +109,17 @@
 	}];
 }
 
-- (instancetype)ct_except:(CollectorConditionBlock)condition
+- (NSArray *)ct_except:(CollectorConditionBlock)condition
 {
 	return [self ct_where:^BOOL(id object){ return !condition(object); }];
 }
 
-- (instancetype)ct_take:(NSUInteger)amount
+- (NSArray *)ct_take:(NSUInteger)amount
 {
 	return [[self ct_objectsInRange:NSMakeRange(0, MIN(amount, [self count]))] mutableCopy];
 }
 
-- (instancetype)ct_distinct
+- (NSArray *)ct_distinct
 {
 	NSMutableArray *distinct = [NSMutableArray array];
 	
@@ -129,26 +129,28 @@
 			[distinct addObject:object];
 	}
 	
-	return distinct;
+	return [distinct copy];
 }
 
-- (instancetype)ct_distinct:(CollectorValueBlock)valueBlock
+- (NSArray *)ct_distinct:(CollectorValueBlock)valueBlock
 {
-	return [self ct_reduceWithSeed:[NSMutableArray array] block:^id(NSMutableArray *cumulated, id object)
+	NSMutableArray *distinct = [self ct_reduceWithSeed:[NSMutableArray array] block:^id(NSMutableArray *cumulated, id object)
 	{
 		id value = valueBlock(object);
-		BOOL objectAlreadyInArray = [cumulated any:^(id tested) { return [valueBlock(tested) isEqual:value]; }];
+		BOOL objectAlreadyInArray = [cumulated ct_any:^(id tested) { return [valueBlock(tested) isEqual:value]; }];
 		if (!objectAlreadyInArray) [cumulated addObject:object];
 		return cumulated;
 	}];
+	
+	return [distinct copy];
 }
 
-- (instancetype)ct_objectsInRange:(NSRange)range
+- (NSArray *)ct_objectsInRange:(NSRange)range
 {
-	return [[self objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:range]] mutableCopy];
+	return [self objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:range]];
 }
 
-- (instancetype)ct_objectsOfKind:(Class)kind
+- (NSArray *)ct_objectsOfKind:(Class)kind
 {
 	return [self ct_where:^BOOL(id object) { return [object isKindOfClass:kind]; }];
 }

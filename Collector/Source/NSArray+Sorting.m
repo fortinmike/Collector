@@ -10,9 +10,9 @@
 
 @implementation NSArray (Sorting)
 
-- (instancetype)ct_reversed
+- (NSArray *)ct_reversed
 {
-	return [[[self reverseObjectEnumerator] allObjects] mutableCopy];
+	return [[self reverseObjectEnumerator] allObjects];
 }
 
 - (NSArray *)ct_shuffled
@@ -28,12 +28,12 @@
 		[copy removeObject:randomItem];
 	}
 	
-	return shuffled;
+	return [shuffled copy];
 }
 
-- (instancetype)ct_orderedByAscending:(CollectorValueBlock)valueBlock
+- (NSArray *)ct_orderedByAscending:(CollectorValueBlock)valueBlock
 {
-	NSArray *sorted = [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2)
+	return [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2)
 	{
 		id value1 = valueBlock(obj1);
 		id value2 = valueBlock(obj2);
@@ -64,11 +64,9 @@
 			@throw [NSException exceptionWithName:@"Ordering Exception" reason:reason userInfo:nil];
 		}
 	}];
-	
-	return [sorted mutableCopy];
 }
 
-- (instancetype)ct_orderedByDescending:(CollectorValueBlock)valueBlock
+- (NSArray *)ct_orderedByDescending:(CollectorValueBlock)valueBlock
 {
 	return [[self ct_orderedByAscending:valueBlock] ct_reversed];
 }

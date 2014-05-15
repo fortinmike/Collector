@@ -12,18 +12,18 @@
 @interface NSArray (Sorting)
 
 /**
- *  Returns a copy of the array with its elements reversed.
+ *  Returns the array's elements in reverse order.
  *
  *  @return A new array containing the receiver's objects in reverse order.
  */
-- (instancetype)ct_reversed;
+- (NSArray *)ct_reversed;
 
 /**
- *  Randomizes objects in an array.
+ *  Returns the array's objects in random order.
  *
  *  @return A new array containing the same items as the receiver but in random order.
  */
-- (instancetype)ct_shuffled;
+- (NSArray *)ct_shuffled;
 
 /**
  *  Returns the array items in ascending order based on the value returned by the block.
@@ -33,7 +33,7 @@
  *
  *  @return A new array with the same items as the receiver but sorted in ascending order based on the values returned from *valueBlock*.
  */
-- (instancetype)ct_orderedByAscending:(CollectorValueBlock)valueBlock;
+- (NSArray *)ct_orderedByAscending:(CollectorValueBlock)valueBlock;
 
 /**
  *  Returns the array items in descending order based on the value returned by the block.
@@ -43,6 +43,6 @@
  *
  *  @return A new array with the same items as the receiver but sorted in descending order based on the values returned from *valueBlock*.
  */
-- (instancetype)ct_orderedByDescending:(CollectorValueBlock)valueBlock;
+- (NSArray *)ct_orderedByDescending:(CollectorValueBlock)valueBlock;
 
 @end
