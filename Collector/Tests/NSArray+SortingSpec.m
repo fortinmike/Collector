@@ -20,7 +20,7 @@ describe(@"NSArray+Sorting", ^
 		{
 			NSArray *strings = @[@"A", @"B", @"C"];
 			
-			[[[strings reversed] should] equal:@[@"C", @"B", @"A"]];
+			[[[strings ct_reversed] should] equal:@[@"C", @"B", @"A"]];
 		});
 	});
 	
@@ -30,7 +30,7 @@ describe(@"NSArray+Sorting", ^
 		{
 			NSArray *strings = @[@"A", @"B", @"C", @1, @2];
 			
-			NSArray *shuffled = [strings shuffled];
+			NSArray *shuffled = [strings ct_shuffled];
 			
 			[[shuffled should] containObjects:@"A", @"B", @"C", @1, @2, nil];
 		});
@@ -42,7 +42,7 @@ describe(@"NSArray+Sorting", ^
 		{
 			NSArray *numbers = @[@1, @5, @10, @3, @(-1), @22, @1, @55, @3.2];
 			NSArray *expectedOrder = @[@(-1), @1, @1, @3, @3.2, @5, @10, @22, @55];
-			NSArray *ordered = [numbers orderedByAscending:^id(id object) { return object; }];
+			NSArray *ordered = [numbers ct_orderedByAscending:^id(id object) { return object; }];
 			
 			[[ordered should] equal:expectedOrder];
 		});
@@ -51,7 +51,7 @@ describe(@"NSArray+Sorting", ^
 		{
 			NSArray *strings = @[@"A", @"B", @"2", @"1", @"22", @"Z", @"11"];
 			NSArray *expectedOrder = @[@"1", @"2", @"11", @"22", @"A", @"B", @"Z"];
-			NSArray *ordered = [strings orderedByAscending:^id(id object) { return object; }];
+			NSArray *ordered = [strings ct_orderedByAscending:^id(id object) { return object; }];
 			
 			[[ordered should] equal:expectedOrder];
 		});
@@ -63,7 +63,7 @@ describe(@"NSArray+Sorting", ^
 		{
 			NSArray *numbers = @[@1, @5, @10, @3, @(-1), @22, @1, @55, @3.2];
 			NSArray *expectedOrder = @[@55, @22, @10, @5, @3.2, @3, @1, @1, @(-1)];
-			NSArray *ordered = [numbers orderedByDescending:^id(id object) { return object; }];
+			NSArray *ordered = [numbers ct_orderedByDescending:^id(id object) { return object; }];
 			
 			[[ordered should] equal:expectedOrder];
 		});
@@ -72,7 +72,7 @@ describe(@"NSArray+Sorting", ^
 		{
 			NSArray *strings = @[@"A", @"B", @"2", @"1", @"22", @"Z", @"11"];
 			NSArray *expectedOrder = @[@"Z", @"B", @"A", @"22", @"11", @"2", @"1"];
-			NSArray *ordered = [strings orderedByDescending:^id(id object) { return object; }];
+			NSArray *ordered = [strings ct_orderedByDescending:^id(id object) { return object; }];
 			
 			[[ordered should] equal:expectedOrder];
 		});

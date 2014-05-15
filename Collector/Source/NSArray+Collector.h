@@ -20,7 +20,7 @@
  *
  *  @return A new array containing all of the receiver's objects but the ones that are equal to the given object.
  */
-- (instancetype)arrayByRemovingObject:(id)object;
+- (instancetype)ct_arrayByRemovingObject:(id)object;
 
 /**
  *  Returns an array that is the same as the receiver but with the given objects removed if they were present.
@@ -29,7 +29,7 @@
  *
  *  @return A new array containing all of the receiver's objects but the ones that are equal to the given objects.
  */
-- (instancetype)arrayByRemovingObjectsFromArray:(NSArray *)array;
+- (instancetype)ct_arrayByRemovingObjectsFromArray:(NSArray *)array;
 
 #pragma mark Block-based Array Manipulation and Filtering
 
@@ -40,7 +40,7 @@
  *
  *  @return The first object that matches the condition or nil if there is no match.
  */
-- (id)first:(ConditionBlock)condition;
+- (id)ct_first:(CollectorConditionBlock)condition;
 
 /**
  *  Returns the first object that matches *condition* or the specified default value.
@@ -48,7 +48,7 @@
  *  @param condition     A block that tests a single object for match.
  *  @param defaultObject The object that gets returned if no object was found.
  */
-- (id)first:(ConditionBlock)condition orDefault:(id)defaultObject;
+- (id)ct_first:(CollectorConditionBlock)condition orDefault:(id)defaultObject;
 
 /**
  *  Returns the last object that matches a condition.
@@ -57,7 +57,7 @@
  *
  *  @return The last object that matches the condition, or nil if there is no match.
  */
-- (id)last:(ConditionBlock)condition;
+- (id)ct_last:(CollectorConditionBlock)condition;
 
 /**
  *  Returns the last object that matches *condition* or the specified default value.
@@ -65,7 +65,7 @@
  *  @param condition     A block that tests a single object for match.
  *  @param defaultObject The object that gets returned if no object was found.
  */
-- (id)last:(ConditionBlock)condition orDefault:(id)defaultObject;
+- (id)ct_last:(CollectorConditionBlock)condition orDefault:(id)defaultObject;
 
 /**
  *  Selects items that match *condition*.
@@ -74,7 +74,7 @@
  *
  *  @return All objects that match the specified condition.
  */
-- (instancetype)where:(ConditionBlock)condition;
+- (instancetype)ct_where:(CollectorConditionBlock)condition;
 
 /**
  *  Creates a new array containing the objects returned from the gathering block.
@@ -84,7 +84,7 @@
  *
  *  @return An array containing all objects returned from invocations of the gathering block.
  */
-- (instancetype)map:(ValueBlock)gatheringBlock;
+- (instancetype)ct_map:(CollectorValueBlock)gatheringBlock;
 
 /**
  *  Returns a single value by applying the block to all of the receiver's objects in sequence and cumulating the results.
@@ -96,12 +96,12 @@
  *
  *  @return The cumulated value after invoking *reducingBlock* on each of the receiver's objects.
  */
-- (id)reduce:(id(^)(id cumulated, id object))reducingBlock;
+- (id)ct_reduce:(id(^)(id cumulated, id object))reducingBlock;
 
 /**
  *  Same as -reduce: but with an initial seed value.
  */
-- (id)reduceWithSeed:(id)seed block:(id(^)(id cumulated, id object))reducingBlock;
+- (id)ct_reduceWithSeed:(id)seed block:(id(^)(id cumulated, id object))reducingBlock;
 
 /**
  *  Iterates over each object and performs the given operation with each object as an argument.
@@ -109,7 +109,7 @@
  *
  *  @param operation The operation to perform for each of the array's objects.
  */
-- (void)each:(OperationBlock)operation;
+- (void)ct_each:(CollectorOperationBlock)operation;
 
 /**
  *  Iterates over each object and performs the given operation with each object and the current index as arguments.
@@ -117,7 +117,7 @@
  *
  *  @param operation The operation to perform for each of the array's objects.
  */
-- (void)eachWithIndex:(void(^)(id object, NSUInteger index))operation;
+- (void)ct_eachWithIndex:(void(^)(id object, NSUInteger index))operation;
 
 /**
  *  Selects all objects but those that match the specified condition.
@@ -126,7 +126,7 @@
  *
  *  @return All objects that *don't* match the specified condition.
  */
-- (instancetype)except:(ConditionBlock)condition;
+- (instancetype)ct_except:(CollectorConditionBlock)condition;
 
 /**
  *  Returns a given number of items from the array.
@@ -135,14 +135,14 @@
  *
  *  @return The first *[amount]* objects of the array or fewer objects if the array is smaller than the specified amount.
  */
-- (instancetype)take:(NSUInteger)amount;
+- (instancetype)ct_take:(NSUInteger)amount;
 
 /**
  *  Eliminates duplicates from an array by comparing objects together using -isEqual:.
  *
  *  @return A new array containing only distinct objects (no duplicates).
  */
-- (instancetype)distinct;
+- (instancetype)ct_distinct;
 
 /**
  *  Eliminates duplicates from an array by comparing the return value of *valueBlock* instead of comparing objects directly.
@@ -153,7 +153,7 @@
  *
  *  @return A new array containing only one object per distinct value returned from *valueBlock*.
  */
-- (instancetype)distinct:(ValueBlock)valueBlock;
+- (instancetype)ct_distinct:(CollectorValueBlock)valueBlock;
 
 /**
  *  Obtains a range of objects from the array.
@@ -162,7 +162,7 @@
  *
  *  @return A new array containing the objects for the given range in the receiver.
  */
-- (instancetype)objectsInRange:(NSRange)range;
+- (instancetype)ct_objectsInRange:(NSRange)range;
 
 /**
  *  Returns all objects whose class is the same as the specified kind.
@@ -171,7 +171,7 @@
  *
  *  @return A new array containing all objects that are of the given kind.
  */
-- (instancetype)objectsOfKind:(Class)kind;
+- (instancetype)ct_objectsOfKind:(Class)kind;
 
 /**
  *  Compares all array objects using the given *comparisonBlock* and returns the final winner.
@@ -180,7 +180,7 @@
  *
  *  @return The object that wins the comparison against all other array objects.
  */
-- (id)winner:(id(^)(id object1, id object2))comparisonBlock;
+- (id)ct_winner:(id(^)(id object1, id object2))comparisonBlock;
 
 /**
  *  Tests each array object and returns YES only when all objects pass the test.
@@ -189,7 +189,7 @@
  *
  *  @return Whether all objects in the array pass the test.
  */
-- (BOOL)all:(ConditionBlock)testBlock;
+- (BOOL)ct_all:(CollectorConditionBlock)testBlock;
 
 /**
  *  Tests each array object and returns YES if at least one of the objects passes the test.
@@ -198,7 +198,7 @@
  *
  *  @return Whether or not at least one of the objects in the array passes the test.
  */
-- (BOOL)any:(ConditionBlock)testBlock;
+- (BOOL)ct_any:(CollectorConditionBlock)testBlock;
 
 /**
  *  Tests each array object and returns YES only if no object passes the test.
@@ -207,7 +207,7 @@
  *
  *  @return Whether or not *none* all objects in the array fails the test.
  */
-- (BOOL)none:(ConditionBlock)testBlock;
+- (BOOL)ct_none:(CollectorConditionBlock)testBlock;
 
 /**
  *  Counts objects that match a given test block.
@@ -216,6 +216,6 @@
  *
  *  @return The number of objects that pass the test.
  */
-- (NSUInteger)count:(ConditionBlock)testBlock;
+- (NSUInteger)ct_count:(CollectorConditionBlock)testBlock;
 
 @end

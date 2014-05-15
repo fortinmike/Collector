@@ -16,14 +16,14 @@
  *
  *  @return A new array containing the receiver's objects in reverse order.
  */
-- (instancetype)reversed;
+- (instancetype)ct_reversed;
 
 /**
  *  Randomizes objects in an array.
  *
  *  @return A new array containing the same items as the receiver but in random order.
  */
-- (instancetype)shuffled;
+- (instancetype)ct_shuffled;
 
 /**
  *  Returns the array items in ascending order based on the value returned by the block.
@@ -33,7 +33,7 @@
  *
  *  @return A new array with the same items as the receiver but sorted in ascending order based on the values returned from *valueBlock*.
  */
-- (instancetype)orderedByAscending:(ValueBlock)valueBlock;
+- (instancetype)ct_orderedByAscending:(CollectorValueBlock)valueBlock;
 
 /**
  *  Returns the array items in descending order based on the value returned by the block.
@@ -43,6 +43,6 @@
  *
  *  @return A new array with the same items as the receiver but sorted in descending order based on the values returned from *valueBlock*.
  */
-- (instancetype)orderedByDescending:(ValueBlock)valueBlock;
+- (instancetype)ct_orderedByDescending:(CollectorValueBlock)valueBlock;
 
 @end

@@ -9,9 +9,9 @@
 #ifndef Collector_CollectorBlockTypes_h
 #define Collector_CollectorBlockTypes_h
 
-typedef void (^OperationBlock)(id object);
-typedef BOOL (^ConditionBlock)(id object);
-typedef id (^ValueBlock)(id object);
-typedef NSNumber * (^NumberBlock)(id object);
+typedef void (^CollectorOperationBlock)(id object);
+typedef BOOL (^CollectorConditionBlock)(id object);
+typedef id (^CollectorValueBlock)(id object);
+typedef NSNumber * (^CollectorNumberBlock)(id object);
 
 #endif

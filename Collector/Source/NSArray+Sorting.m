@@ -10,12 +10,12 @@
 
 @implementation NSArray (Sorting)
 
-- (instancetype)reversed
+- (instancetype)ct_reversed
 {
 	return [[[self reverseObjectEnumerator] allObjects] mutableCopy];
 }
 
-- (NSArray *)shuffled
+- (NSArray *)ct_shuffled
 {
 	NSMutableArray *copy = [self mutableCopy];
 	NSMutableArray *shuffled = [NSMutableArray array];
@@ -31,7 +31,7 @@
 	return shuffled;
 }
 
-- (instancetype)orderedByAscending:(ValueBlock)valueBlock
+- (instancetype)ct_orderedByAscending:(CollectorValueBlock)valueBlock
 {
 	NSArray *sorted = [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2)
 	{
@@ -68,9 +68,9 @@
 	return [sorted mutableCopy];
 }
 
-- (instancetype)orderedByDescending:(ValueBlock)valueBlock
+- (instancetype)ct_orderedByDescending:(CollectorValueBlock)valueBlock
 {
-	return [[self orderedByAscending:valueBlock] reversed];
+	return [[self ct_orderedByAscending:valueBlock] ct_reversed];
 }
 
 @end

@@ -13,35 +13,35 @@
 
 #pragma mark Manipulating Arrays of NSNumber Instances
 
-- (NSNumber *)min
+- (NSNumber *)ct_min
 {
-	return [self min:^id(NSNumber *number) { return number; }];
+	return [self ct_min:^id(NSNumber *number) { return number; }];
 }
 
-- (NSNumber *)max
+- (NSNumber *)ct_max
 {
-	return [self max:^id(NSNumber *number) { return number; }];
+	return [self ct_max:^id(NSNumber *number) { return number; }];
 }
 
-- (NSNumber *)min:(NumberBlock)numberBlock
+- (NSNumber *)ct_min:(CollectorNumberBlock)numberBlock
 {
-	return [self winner:^id(id obj1, id obj2)
+	return [self ct_winner:^id(id obj1, id obj2)
 	{
 		return (([numberBlock(obj1) compare:numberBlock(obj2)] == NSOrderedAscending) ? obj1 : obj2);
 	}];
 }
 
-- (NSNumber *)max:(NumberBlock)numberBlock
+- (NSNumber *)ct_max:(CollectorNumberBlock)numberBlock
 {
-	return [self winner:^id(id obj1, id obj2)
+	return [self ct_winner:^id(id obj1, id obj2)
 	{
 		return (([numberBlock(obj1) compare:numberBlock(obj2)] == NSOrderedDescending) ? obj1 : obj2);
 	}];
 }
 
-- (NSNumber *)sum
+- (NSNumber *)ct_sum
 {
-	return [self reduceWithSeed:@(0) block:^id(NSNumber *cumulated, NSNumber *number)
+	return [self ct_reduceWithSeed:@(0) block:^id(NSNumber *cumulated, NSNumber *number)
 	{
 		return @([cumulated doubleValue] + [number doubleValue]);
 	}];

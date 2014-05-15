@@ -19,13 +19,13 @@ describe(@"NSArray+Collector", ^
 		it(@"should return the first matching object if there are objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo", @2, @"Bar"];
-			[[[objects first:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }] should] equal:@"Foo"];
+			[[[objects ct_first:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }] should] equal:@"Foo"];
 		});
 		
 		it(@"should return nil if there are no objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo"];
-			[[[objects first:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }] should] beNil];
+			[[[objects ct_first:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }] should] beNil];
 		});
 	});
 	
@@ -34,13 +34,13 @@ describe(@"NSArray+Collector", ^
 		it(@"should return the first matching object if there are objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo", @2, @"Bar"];
-			[[[objects first:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; } orDefault:@"Default"] should] equal:@"Foo"];
+			[[[objects ct_first:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; } orDefault:@"Default"] should] equal:@"Foo"];
 		});
 		
 		it(@"should return the default value if there are no objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo"];
-			[[[objects first:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; } orDefault:@"Default"] should] equal:@"Default"];
+			[[[objects ct_first:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; } orDefault:@"Default"] should] equal:@"Default"];
 		});
 	});
 	
@@ -49,13 +49,13 @@ describe(@"NSArray+Collector", ^
 		it(@"should return the last matching object if there are objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo", @2, @"Bar", @3];
-			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }] should] equal:@"Bar"];
+			[[[objects ct_last:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }] should] equal:@"Bar"];
 		});
 		
 		it(@"should return nil if there are no objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo"];
-			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }] should] beNil];
+			[[[objects ct_last:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }] should] beNil];
 		});
 	});
 	
@@ -64,13 +64,13 @@ describe(@"NSArray+Collector", ^
 		it(@"should return the last matching object if there are objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo", @2, @"Bar"];
-			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; } orDefault:@"Default"] should] equal:@2];
+			[[[objects ct_last:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; } orDefault:@"Default"] should] equal:@2];
 		});
 		
 		it(@"should return the default value if there are no objects matching the condition in the array", ^
 		{
 			NSArray *objects = @[@1, @"Foo"];
-			[[[objects last:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; } orDefault:@"Default"] should] equal:@"Default"];
+			[[[objects ct_last:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; } orDefault:@"Default"] should] equal:@"Default"];
 		});
 	});
 	
@@ -80,7 +80,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@1, @2, @"Three", @4];
 			NSArray *expectedObjects = @[@1, @2, @4];
-			[[[objects where:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }] should] equal:expectedObjects];
+			[[[objects ct_where:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }] should] equal:expectedObjects];
 		});
 	});
 	
@@ -91,7 +91,7 @@ describe(@"NSArray+Collector", ^
 			NSArray *objects = @[@"A", @"B", @"C"];
 			NSArray *expectedObjects = @[@"A-hello", @"B-hello", @"C-hello"];
 			
-			NSArray *resultingObjects = [objects map:^id(NSString *string)
+			NSArray *resultingObjects = [objects ct_map:^id(NSString *string)
 			{
 				return [string stringByAppendingString:@"-hello"];
 			}];
@@ -104,7 +104,7 @@ describe(@"NSArray+Collector", ^
 			NSArray *objects = @[@"A", @"B", @"C"];
 			NSArray *expectedObjects = @[@"A-hello", @"C-hello"];
 			
-			NSArray *resultingObjects = [objects map:^id(NSString *string)
+			NSArray *resultingObjects = [objects ct_map:^id(NSString *string)
 			{
 				if ([string isEqualToString:@"B"]) return nil;
 				return [string stringByAppendingString:@"-hello"];
@@ -120,7 +120,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *strings = @[@"A", @"B", @"C", @"D"];
 			
-			NSString *combined = [strings reduce:^id(id cumulated, id object)
+			NSString *combined = [strings ct_reduce:^id(id cumulated, id object)
 			{
 				return [cumulated stringByAppendingString:object];
 			}];
@@ -135,7 +135,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *strings = @[@"A", @"B", @"C", @"D", @"!"];
 			
-			NSString *combined = [strings reduceWithSeed:@"Hello " block:^id(id cumulated, id object)
+			NSString *combined = [strings ct_reduceWithSeed:@"Hello " block:^id(id cumulated, id object)
 			{
 				return [cumulated stringByAppendingString:object];
 			}];
@@ -151,7 +151,7 @@ describe(@"NSArray+Collector", ^
 			NSArray *objects = @[@"A", @"B", @"C"];
 			
 			NSMutableArray *cumulated = [NSMutableArray array];
-			[objects each:^(NSMutableString *string) { [cumulated addObject:string]; }];
+			[objects ct_each:^(NSMutableString *string) { [cumulated addObject:string]; }];
 			
 			[[cumulated should] equal:objects];
 		});
@@ -167,7 +167,7 @@ describe(@"NSArray+Collector", ^
 			NSMutableArray *cumulated = [NSMutableArray array];
 			NSMutableArray *indexes = [NSMutableArray array];
 			
-			[objects eachWithIndex:^(NSMutableString *string, NSUInteger index)
+			[objects ct_eachWithIndex:^(NSMutableString *string, NSUInteger index)
 			{
 				[cumulated addObject:string];
 				[indexes addObject:@(index)];
@@ -182,7 +182,7 @@ describe(@"NSArray+Collector", ^
 	{
 		NSArray *strings = @[@"A", @"B", @"C"];
 		
-		NSArray *filtered = [strings except:^BOOL(NSString *string) { return [string isEqualToString:@"A"]; }];
+		NSArray *filtered = [strings ct_except:^BOOL(NSString *string) { return [string isEqualToString:@"A"]; }];
 		
 		[[filtered shouldNot] contain:@"A"];
 		[[theValue([filtered count]) should] equal:theValue(2)];
@@ -194,7 +194,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @"B", @"C"];
 
-			NSArray *taken = [objects take:0];
+			NSArray *taken = [objects ct_take:0];
 			
 			[[taken should] beKindOfClass:[NSArray class]];
 			[[theValue([taken count]) should] equal:theValue(0)];
@@ -204,7 +204,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @"B", @"C"];
 			
-			NSArray *taken = [objects take:2];
+			NSArray *taken = [objects ct_take:2];
 			
 			[[taken should] equal:@[@"A", @"B"]];
 		});
@@ -213,7 +213,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @"B", @"C"];
 			
-			NSArray *taken = [objects take:15];
+			NSArray *taken = [objects ct_take:15];
 			
 			[[taken should] equal:@[@"A", @"B", @"C"]];
 		});
@@ -225,7 +225,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @"A", @"B", @"C", @"C"];
 			
-			[[[objects distinct] should] equal:@[@"A", @"B", @"C"]];
+			[[[objects ct_distinct] should] equal:@[@"A", @"B", @"C"]];
 		});
 		
 		it(@"should keep only one instance given the same instance multiple times", ^
@@ -233,7 +233,7 @@ describe(@"NSArray+Collector", ^
 			NSString *instance = @"B";
 			NSArray *objects = @[@"A", instance, @"C", instance];
 			
-			[[[objects distinct] should] equal:@[@"A", @"B", @"C"]];
+			[[[objects ct_distinct] should] equal:@[@"A", @"B", @"C"]];
 		});
 	});
 	
@@ -243,7 +243,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @"A", @1, @"C", @2];
 			
-			NSArray *distinctObjects = [objects distinct:^id(id object) { return [object class]; }];
+			NSArray *distinctObjects = [objects ct_distinct:^id(id object) { return [object class]; }];
 			
 			[[distinctObjects should] equal:@[@"A", @1]];
 		});
@@ -255,7 +255,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@1, @2, @3, @4];
 			
-			NSArray *obtained = [objects objectsInRange:NSMakeRange(1, 2)];
+			NSArray *obtained = [objects ct_objectsInRange:NSMakeRange(1, 2)];
 			
 			[[obtained should] equal:@[@2, @3]];
 		});
@@ -264,7 +264,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@1, @2, @3, @4];
 			
-			[[theBlock(^{ [objects objectsInRange:NSMakeRange(1, 30)]; }) should] raise];
+			[[theBlock(^{ [objects ct_objectsInRange:NSMakeRange(1, 30)]; }) should] raise];
 		});
 	});
 	
@@ -274,8 +274,8 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
 			
-			NSArray *strings = [objects objectsOfKind:[NSString class]];
-			NSArray *numbers = [objects objectsOfKind:[NSNumber class]];
+			NSArray *strings = [objects ct_objectsOfKind:[NSString class]];
+			NSArray *numbers = [objects ct_objectsOfKind:[NSNumber class]];
 			
 			[[strings should] equal:@[@"A", @"B", @"C"]];
 			[[numbers should] equal:@[@1, @2, @3, @4]];
@@ -288,7 +288,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@1, @4, @2, @3];
 			
-			NSNumber *winner = [objects winner:^NSNumber *(NSNumber *nb1, NSNumber *nb2)
+			NSNumber *winner = [objects ct_winner:^NSNumber *(NSNumber *nb1, NSNumber *nb2)
 			{
 				return [nb1 compare:nb2] == NSOrderedDescending ? nb1 : nb2;
 			}];
@@ -300,7 +300,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@1, @4, @4, @3];
 			
-			NSNumber *winner = [objects winner:^NSNumber *(NSNumber *nb1, NSNumber *nb2)
+			NSNumber *winner = [objects ct_winner:^NSNumber *(NSNumber *nb1, NSNumber *nb2)
 			{
 				return [nb1 compare:nb2] == NSOrderedAscending ? nb2 : nb1;
 			}];
@@ -315,7 +315,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@0, @1, @2, @3, @4];
 			
-			BOOL allObjectsAreNumbers = [objects all:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }];
+			BOOL allObjectsAreNumbers = [objects ct_all:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }];
 			
 			[[theValue(allObjectsAreNumbers) should] beYes];
 		});
@@ -324,7 +324,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
 			
-			BOOL allObjectsAreStrings = [objects all:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			BOOL allObjectsAreStrings = [objects ct_all:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
 			
 			[[theValue(allObjectsAreStrings) should] beNo];
 		});
@@ -336,7 +336,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
 			
-			BOOL anyObjectIsAString = [objects any:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			BOOL anyObjectIsAString = [objects ct_any:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
 			
 			[[theValue(anyObjectIsAString) should] beYes];
 		});
@@ -345,7 +345,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
 			
-			BOOL anyObjectIsData = [objects any:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }];
+			BOOL anyObjectIsData = [objects ct_any:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }];
 			
 			[[theValue(anyObjectIsData) should] beNo];
 		});
@@ -357,7 +357,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
 			
-			BOOL anyObjectIsData = [objects none:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }];
+			BOOL anyObjectIsData = [objects ct_none:^BOOL(id object) { return [object isKindOfClass:[NSData class]]; }];
 			
 			[[theValue(anyObjectIsData) should] beYes];
 		});
@@ -366,7 +366,7 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
 			
-			BOOL anyObjectIsAString = [objects none:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			BOOL anyObjectIsAString = [objects ct_none:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
 			
 			[[theValue(anyObjectIsAString) should] beNo];
 		});
@@ -378,8 +378,8 @@ describe(@"NSArray+Collector", ^
 		{
 			NSArray *objects = @[@"A", @1, @2, @"B", @3, @4, @"C"];
 			
-			NSUInteger numberOfStrings = [objects count:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
-			NSUInteger numberOfNumbers = [objects count:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }];
+			NSUInteger numberOfStrings = [objects ct_count:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			NSUInteger numberOfNumbers = [objects ct_count:^BOOL(id object) { return [object isKindOfClass:[NSNumber class]]; }];
 			
 			[[theValue(numberOfStrings) should] equal:theValue(3)];
 			[[theValue(numberOfNumbers) should] equal:theValue(4)];

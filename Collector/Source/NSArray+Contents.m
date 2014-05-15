@@ -13,7 +13,7 @@
 
 #pragma mark Array Contents Checking
 
-- (BOOL)containsObjects:(NSArray *)array
+- (BOOL)ct_containsObjects:(NSArray *)array
 {
 	for (id object in array)
 		if (![self containsObject:object]) return NO;
@@ -21,24 +21,24 @@
 	return YES;
 }
 
-- (BOOL)containsOnlyObjects:(NSArray *)array
+- (BOOL)ct_containsOnlyObjects:(NSArray *)array
 {
 	NSUInteger count1 = [self count];
 	NSUInteger count2 = [array count];
 	
 	if (count1 != count2) return NO;
 	
-	return [self containsObjects:array];
+	return [self ct_containsObjects:array];
 }
 
-- (BOOL)containsAnyObject:(NSArray *)objects
+- (BOOL)ct_containsAnyObject:(NSArray *)objects
 {
-	return [objects any:^BOOL(id object) { return [self containsObject:object]; }];
+	return [objects ct_any:^BOOL(id object) { return [self containsObject:object]; }];
 }
 
-- (BOOL)areObjectsKindOfClass:(Class)klass
+- (BOOL)ct_areObjectsKindOfClass:(Class)klass
 {
-	return [self all:^BOOL(id object) { return [object isKindOfClass:klass]; }];
+	return [self ct_all:^BOOL(id object) { return [object isKindOfClass:klass]; }];
 }
 
 @end

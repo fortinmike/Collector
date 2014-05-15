@@ -19,7 +19,7 @@
  *
  *  @return The lowest NSNumber in the array.
  */
-- (NSNumber *)min;
+- (NSNumber *)ct_min;
 
 /**
  *  Making no assumption about array contents, this method provides a block from which an
@@ -28,7 +28,7 @@
  *
  *  @return the object where *numberBlock* returns the lowest value.
  */
-- (NSNumber *)min:(NumberBlock)numberBlock;
+- (NSNumber *)ct_min:(CollectorNumberBlock)numberBlock;
 
 /**
  *  Assuming that the array contains only NSNumber instances, returns the NSNumber
@@ -36,7 +36,7 @@
  *
  *  @return The highest NSNumber in the array.
  */
-- (NSNumber *)max;
+- (NSNumber *)ct_max;
 
 /**
  *  Making no assumption about array contents, this method provides a block from which an
@@ -45,7 +45,7 @@
  *
  *  @return the object where *numberBlock* returns the highest value.
  */
-- (NSNumber *)max:(NumberBlock)numberBlock;
+- (NSNumber *)ct_max:(CollectorNumberBlock)numberBlock;
 
 /**
  *  Assuming the array contains only NSNumber instances, returns a new NSNumber whose value
@@ -53,6 +53,6 @@
  *
  *  @return The sum of all NSNumber instances in the array.
  */
-- (NSNumber *)sum;
+- (NSNumber *)ct_sum;
 
 @end

@@ -20,7 +20,7 @@ describe(@"NSArray+Numbers", ^
 		{
 			NSArray *numbers = @[@1, @5, @10, @3, @(-1), @22, @1, @55, @3.2];
 			
-			[[[numbers min] should] equal:@(-1)];
+			[[[numbers ct_min] should] equal:@(-1)];
 		});
 	});
 	
@@ -30,7 +30,7 @@ describe(@"NSArray+Numbers", ^
 		{
 			NSArray *numbers = @[@[@1], @[@5], @[@10], @[@3], @[@(-1)]];
 			
-			NSNumber *min = [numbers min:^NSNumber *(id object) { return [object firstObject]; }];
+			NSNumber *min = [numbers ct_min:^NSNumber *(id object) { return [object firstObject]; }];
 			
 			[[min should] equal:@[@(-1)]];
 		});
@@ -42,7 +42,7 @@ describe(@"NSArray+Numbers", ^
 		{
 			NSArray *numbers = @[@1, @5, @10, @3, @(-1), @22, @1, @55, @3.2];
 			
-			[[[numbers max] should] equal:@(55)];
+			[[[numbers ct_max] should] equal:@(55)];
 		});
 	});
 	
@@ -52,7 +52,7 @@ describe(@"NSArray+Numbers", ^
 		{
 			NSArray *numbers = @[@[@1], @[@5], @[@10], @[@3], @[@(-1)]];
 			
-			NSNumber *min = [numbers max:^NSNumber *(id object) { return [object firstObject]; }];
+			NSNumber *min = [numbers ct_max:^NSNumber *(id object) { return [object firstObject]; }];
 			
 			[[min should] equal:@[@(10)]];
 		});
@@ -64,7 +64,7 @@ describe(@"NSArray+Numbers", ^
 		{
 			NSArray *numbers = @[@1, @5, @10, @3, @(-1), @22, @1, @55, @3.2];
 			
-			[[[numbers sum] should] equal:99.2 withDelta:FLT_EPSILON];
+			[[[numbers ct_sum] should] equal:99.2 withDelta:FLT_EPSILON];
 		});
 	});
 });
