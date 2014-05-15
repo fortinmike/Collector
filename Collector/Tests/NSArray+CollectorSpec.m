@@ -193,7 +193,6 @@ describe(@"NSArray+Collector", ^
 		it(@"should return no object when asked for zero objects", ^
 		{
 			NSArray *objects = @[@"A", @"B", @"C"];
-
 			NSArray *taken = [objects ct_take:0];
 			
 			[[taken should] beKindOfClass:[NSArray class]];
