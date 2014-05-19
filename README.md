@@ -21,9 +21,11 @@ Ruby and LINQ-inspired categories on NSArray. Fully tested and documented.
 
 - Quick and easy sorting.
 
-### NSArray+Collector
+## API
 
 *Note: The following declarations might not be 100% up-to-date with the actual API Collector offers and are displayed here so you can get a feel for the library.*
+
+### NSArray+Collector
 
 ```objc
 - (NSArray *)ct_arrayByRemovingObject:(id)object;
@@ -51,9 +53,21 @@ Ruby and LINQ-inspired categories on NSArray. Fully tested and documented.
 - (NSUInteger)ct_count:(CollectorConditionBlock)testBlock;
 ```
 
-### NSArray+Contents
+### NSMutableArray+Queue
 
-*Note: The following declarations might not be 100% up-to-date with the actual API Collector offers and are displayed here so you can get a feel for the library.*
+```objc
+- (void)ct_enqueue:(id)object;
+- (id)ct_dequeue;
+```
+
+### NSMutableArray+Stack
+
+```objc
+- (void)ct_push:(id)object;
+- (id)ct_pop;
+```
+
+### NSArray+Contents
 
 ```objc
 - (BOOL)ct_containsObjects:(NSArray *)array;
@@ -63,8 +77,6 @@ Ruby and LINQ-inspired categories on NSArray. Fully tested and documented.
 ```
 
 ### NSArray+Numbers
-
-*Note: The following declarations might not be 100% up-to-date with the actual API Collector offers and are displayed here so you can get a feel for the library.*
 
 ```objc
 - (NSNumber *)ct_min;
@@ -77,13 +89,18 @@ Ruby and LINQ-inspired categories on NSArray. Fully tested and documented.
 
 ### NSArray+Sorting
 
-*Note: The following declarations might not be 100% up-to-date with the actual API Collector offers and are displayed here so you can get a feel for the library.*
-
 ```objc
 - (NSArray *)ct_reversed;
 - (NSArray *)ct_shuffled;
 - (NSArray *)ct_orderedByAscending:(CollectorValueBlock)valueBlock;
 - (NSArray *)ct_orderedByDescending:(CollectorValueBlock)valueBlock;
+```
+
+### NSMutableArray+Collector
+
+```objc
+- (BOOL)ct_addObjectIfNoneEquals:(id)object;
+- (BOOL)ct_addObjectIfNotNil:(id)object;
 ```
 
 ## Installation
