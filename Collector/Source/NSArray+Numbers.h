@@ -57,10 +57,26 @@
 
 /**
  *  Making no assumption about array contents, this method provides a block from which an
- *  NSNumber must be returned. Returns the sum of all values returned from *numberBlock*.
+ *  NSNumber must be returned. This method returns the sum of all values returned from *numberBlock*.
  *
  *  @return The sum of all values returned by *numberBlock*.
  */
 - (NSNumber *)ct_sum:(CollectorNumberBlock)numberBlock;
+
+/**
+ *  Assuming the array contains only NSNumber instances, returns a new NSNumber whose value
+ *  is the arithmetic mean of all NSNumber instances in the array.
+ *
+ *  @return The arithmetic mean (a.k.a. "mean" or "average") of all NSNumber instances in the array.
+ */
+- (NSNumber *)ct_arithmeticMean;
+
+/**
+ *  Making no assumption about array contains, this method provides a block from which an NSnumber must
+ *  be returned. This method returns the arithmetic mean of all values returned from *numberBlock*.
+ *
+ *  @return The arithmetic mean (a.k.a. "mean" or "average") of all NSNumber instances returned by *numberBlock*.
+ */
+- (NSNumber *)ct_arithmeticMean:(CollectorNumberBlock)numberBlock;
 
 @end

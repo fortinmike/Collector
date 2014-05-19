@@ -15,7 +15,7 @@
 
 - (NSNumber *)ct_min
 {
-	return [self ct_min:^id(NSNumber *number) { return number; }];
+	return [self ct_min:^NSNumber *(NSNumber *number) { return number; }];
 }
 
 - (NSNumber *)ct_min:(CollectorNumberBlock)numberBlock
@@ -28,7 +28,7 @@
 
 - (NSNumber *)ct_max
 {
-	return [self ct_max:^id(NSNumber *number) { return number; }];
+	return [self ct_max:^NSNumber *(NSNumber *number) { return number; }];
 }
 
 - (NSNumber *)ct_max:(CollectorNumberBlock)numberBlock
@@ -53,6 +53,21 @@
 	{
 		return @([cumulated doubleValue] + [numberBlock(object) doubleValue]);
 	}];
+}
+
+- (NSNumber *)ct_arithmeticMean
+{
+	return [self ct_arithmeticMean:^NSNumber *(NSNumber *number) { return number; }];
+}
+
+- (NSNumber *)ct_arithmeticMean:(CollectorNumberBlock)numberBlock
+{
+	double sum = 0;
+	
+	for (id object in self)
+		sum += [numberBlock(object) doubleValue];
+	
+	return @(sum / [self count]);
 }
 
 @end

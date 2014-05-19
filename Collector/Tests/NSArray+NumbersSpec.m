@@ -79,6 +79,28 @@ describe(@"NSArray+Numbers", ^
 			[[sum should] equal:19.2 withDelta:FLT_EPSILON];
 		});
 	});
+	
+	context(@"arithmetic mean", ^
+	{
+		it(@"should return the correct value given an array of numbers", ^
+		{
+			NSArray *numbers = @[@1, @5, @10, @3.2];
+			
+			[[[numbers ct_arithmeticMean] should] equal:4.8 withDelta:FLT_EPSILON];
+		});
+	});
+	
+	context(@"arithmetic mean with number block", ^
+	{
+		it(@"should return the arithmetic mean of all valuesreturned by the number block", ^
+		{
+			NSArray *numbers = @[@[@1], @[@5], @[@10], @[@3.2]];
+			
+			NSNumber *mean = [numbers ct_arithmeticMean:^NSNumber *(id object) { return [object firstObject]; }];
+			
+			[[mean should] equal:4.8 withDelta:FLT_EPSILON];
+		});
+	});
 });
 
 SPEC_END
