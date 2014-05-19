@@ -13,5 +13,8 @@
 #import "NSArray+Contents.h"
 #import "NSArray+Numbers.h"
 #import "NSArray+Sorting.h"
+#import "NSMutableArray+Collector.h"
+#import "NSMutableArray+Queue.h"
+#import "NSMutableArray+Stack.h"
 
 #endif
