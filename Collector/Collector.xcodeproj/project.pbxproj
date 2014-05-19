@@ -110,6 +110,7 @@
 		4C59966C19145A4900EFA82C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4C5BB18219145D24009CB21B /* Collector.Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Collector.Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5BB19219145D25009CB21B /* Collector.Mac.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Collector.Mac.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6128DE192AA53A00FD380B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		4CC18D2319145C6400CEECEC /* Collector.iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Collector.iOS.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC18D2F19145C6400CEECEC /* Collector.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Collector.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Collector-Prefix.pch"; path = "Source/Collector-Prefix.pch"; sourceTree = "<group>"; };
@@ -257,6 +258,7 @@
 		4CC252DB191C1E5D00E49DF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C6128DE192AA53A00FD380B /* CHANGELOG.md */,
 				4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */,
 				4CC18D4519145C9B00CEECEC /* Collector.Mac-Info.plist */,
 				4CC252DC191C1E7300E49DF7 /* Collector.podspec */,
