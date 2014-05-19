@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Collector"
-  s.version          = "1.1.0"
+  s.version          = "1.1.1"
   s.summary          = "Ruby and LINQ-inspired categories on NSArray. Fully tested and documented."
   s.homepage         = "http://github.com/fortinmike/Collector"
   s.license          = 'MIT'
