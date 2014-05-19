@@ -10,7 +10,7 @@
 
 @interface NSMutableArray (Collector)
 
-- (void)ct_addObjectIfNoneEquals:(id)object;
-- (void)ct_addObjectIfNotNil:(id)object;
+- (BOOL)ct_addObjectIfNoneEquals:(id)object;
+- (BOOL)ct_addObjectIfNotNil:(id)object;
 
 @end

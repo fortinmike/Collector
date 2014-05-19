@@ -10,15 +10,24 @@
 
 @implementation NSMutableArray (Collector)
 
-- (void)ct_addObjectIfNoneEquals:(id)object
+- (BOOL)ct_addObjectIfNoneEquals:(id)object
 {
 	if (![self containsObject:object])
+	{
 		[self addObject:object];
+		return YES;
+	}
+	return NO;
 }
 
-- (void)ct_addObjectIfNotNil:(id)object
+- (BOOL)ct_addObjectIfNotNil:(id)object
 {
-	if (object != nil) [self addObject:object];
+	if (object != nil)
+	{
+		[self addObject:object];
+		return YES;
+	}
+	return NO;
 }
 
 @end

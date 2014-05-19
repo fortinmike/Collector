@@ -11,6 +11,8 @@
 		4C42540E192A526200C5041F /* NSMutableArray+StackSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C42540C192A526200C5041F /* NSMutableArray+StackSpec.m */; };
 		4C42540F192A526A00C5041F /* NSMutableArray+QueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573FA192A51020089DBB5 /* NSMutableArray+QueueSpec.m */; };
 		4C425410192A526F00C5041F /* NSMutableArray+QueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573FA192A51020089DBB5 /* NSMutableArray+QueueSpec.m */; };
+		4C425412192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */; };
+		4C425413192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */; };
 		4C4AA6FF1920150F008FB311 /* NSArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */; };
 		4C4AA7001920150F008FB311 /* NSArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */; };
 		4C4AA7011920150F008FB311 /* NSArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */; };
@@ -88,6 +90,7 @@
 		38990A9BF186483784019B54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3F08C97F96A34A0F8AE9D657 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C42540C192A526200C5041F /* NSMutableArray+StackSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+StackSpec.m"; sourceTree = "<group>"; };
+		4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CollectorSpec.m"; sourceTree = "<group>"; };
 		4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Collector.h"; sourceTree = "<group>"; };
 		4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Collector.m"; sourceTree = "<group>"; };
 		4C4AA70319201B50008FB311 /* NSArray+Numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Numbers.h"; sourceTree = "<group>"; };
@@ -244,6 +247,7 @@
 				4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */,
 				4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */,
 				4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */,
+				4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */,
 				4CC573FA192A51020089DBB5 /* NSMutableArray+QueueSpec.m */,
 				4C42540C192A526200C5041F /* NSMutableArray+StackSpec.m */,
 			);
@@ -586,6 +590,7 @@
 			files = (
 				4C4AA7181920763C008FB311 /* NSArray+ContentsSpec.m in Sources */,
 				4C4AA715192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */,
+				4C425413192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */,
 				4C4AA71B192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */,
 				4C425410192A526F00C5041F /* NSMutableArray+QueueSpec.m in Sources */,
 				4C42540E192A526200C5041F /* NSMutableArray+StackSpec.m in Sources */,
@@ -613,6 +618,7 @@
 			files = (
 				4C4AA7171920763C008FB311 /* NSArray+ContentsSpec.m in Sources */,
 				4C4AA714192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */,
+				4C425412192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */,
 				4C4AA71A192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */,
 				4C42540F192A526A00C5041F /* NSMutableArray+QueueSpec.m in Sources */,
 				4C42540D192A526200C5041F /* NSMutableArray+StackSpec.m in Sources */,
