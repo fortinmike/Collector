@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CollectorBlockTypes.h"
 
 @interface NSMutableArray (Collector)
 
+#pragma mark Adding Objects
+
 - (BOOL)ct_addObjectIfNoneEquals:(id)object;
 - (BOOL)ct_addObjectIfNotNil:(id)object;
+
+#pragma mark Removing Objects
+
+- (void)ct_removeObjectsWhere:(CollectorConditionBlock)conditionBlock;
 
 @end

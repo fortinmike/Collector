@@ -59,6 +59,18 @@ describe(@"NSMutableArray+Collector", ^
 			[[theValue(success) should] beNo];
 		});
 	});
+	
+	context(@"remove objects where", ^
+	{
+		it(@"should remove all objects that match the condition", ^
+		{
+			NSMutableArray *array = [@[@1, @2, @"3", @4, @"5"] mutableCopy];
+			
+			[array ct_removeObjectsWhere:^BOOL(id object) { return [object isKindOfClass:[NSString class]]; }];
+			
+			[[array should] equal:@[@1, @2, @4]];
+		});
+	});
 });
 
 SPEC_END

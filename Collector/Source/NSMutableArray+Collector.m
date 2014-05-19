@@ -10,6 +10,8 @@
 
 @implementation NSMutableArray (Collector)
 
+#pragma mark Adding Objects
+
 - (BOOL)ct_addObjectIfNoneEquals:(id)object
 {
 	if (![self containsObject:object])
@@ -28,6 +30,21 @@
 		return YES;
 	}
 	return NO;
+}
+
+#pragma mark Removing Objects
+
+- (void)ct_removeObjectsWhere:(CollectorConditionBlock)conditionBlock
+{
+	NSMutableArray *objectsToRemove = [NSMutableArray array];
+	
+	for (id object in self)
+	{
+		if (conditionBlock(object))
+			[objectsToRemove addObject:object];
+	}
+	
+	[self removeObjectsInArray:objectsToRemove];
 }
 
 @end
