@@ -69,7 +69,7 @@
  *
  *  @return The arithmetic mean (a.k.a. "mean" or "average") of all NSNumber instances in the array.
  */
-- (NSNumber *)ct_arithmeticMean;
+- (NSNumber *)ct_average;
 
 /**
  *  Making no assumption about array contains, this method provides a block from which an NSnumber must
@@ -77,6 +77,6 @@
  *
  *  @return The arithmetic mean (a.k.a. "mean" or "average") of all NSNumber instances returned by *numberBlock*.
  */
-- (NSNumber *)ct_arithmeticMean:(CollectorNumberBlock)numberBlock;
+- (NSNumber *)ct_average:(CollectorNumberBlock)numberBlock;
 
 @end

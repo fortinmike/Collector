@@ -55,12 +55,12 @@
 	}];
 }
 
-- (NSNumber *)ct_arithmeticMean
+- (NSNumber *)ct_average
 {
-	return [self ct_arithmeticMean:^NSNumber *(NSNumber *number) { return number; }];
+	return [self ct_average:^NSNumber *(NSNumber *number) { return number; }];
 }
 
-- (NSNumber *)ct_arithmeticMean:(CollectorNumberBlock)numberBlock
+- (NSNumber *)ct_average:(CollectorNumberBlock)numberBlock
 {
 	double sum = 0;
 	

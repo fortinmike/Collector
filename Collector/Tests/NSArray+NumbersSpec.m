@@ -86,7 +86,7 @@ describe(@"NSArray+Numbers", ^
 		{
 			NSArray *numbers = @[@1, @5, @10, @3.2];
 			
-			[[[numbers ct_arithmeticMean] should] equal:4.8 withDelta:FLT_EPSILON];
+			[[[numbers ct_average] should] equal:4.8 withDelta:FLT_EPSILON];
 		});
 	});
 	
@@ -96,7 +96,7 @@ describe(@"NSArray+Numbers", ^
 		{
 			NSArray *numbers = @[@[@1], @[@5], @[@10], @[@3.2]];
 			
-			NSNumber *mean = [numbers ct_arithmeticMean:^NSNumber *(id object) { return [object firstObject]; }];
+			NSNumber *mean = [numbers ct_average:^NSNumber *(id object) { return [object firstObject]; }];
 			
 			[[mean should] equal:4.8 withDelta:FLT_EPSILON];
 		});
