@@ -11,7 +11,7 @@ Ruby and LINQ-inspired categories on NSArray. Fully tested and documented.
 
 - A safe (prefixed) set of category methods on NSArray.
 - Fully tested (using the awesome [Kiwi](https://github.com/kiwi-bdd/Kiwi) library). Take a look at the tests for simple usage examples.
-- Fully documented (method summaries are displayed when auto-complete is activated in Xcode 5+).
+- Fully documented (method summaries are displayed when auto-complete is triggered in Xcode 5+).
 
 ## Overview
 
