@@ -85,6 +85,8 @@ Ruby and LINQ-inspired categories on NSArray. Fully tested and documented.
 - (NSNumber *)ct_max:(CollectorNumberBlock)numberBlock;
 - (NSNumber *)ct_sum;
 - (NSNumber *)ct_sum:(CollectorNumberBlock)numberBlock;
+- (NSNumber *)ct_average;
+- (NSNumber *)ct_average:(CollectorNumberBlock)numberBlock;
 ```
 
 ### NSArray+Sorting
