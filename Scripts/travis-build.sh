@@ -1,9 +1,9 @@
 #!/bin/sh
 set -e
 
-cd Collector
+cd "$1"
 
 pod install
 
-xctool -workspace Collector.xcworkspace -scheme Collector.iOS test
-xctool -workspace Collector.xcworkspace -scheme Collector.Mac test
+xctool -workspace "$1.xcworkspace" -scheme "$1.iOS" test
+xctool -workspace "$1.xcworkspace" -scheme "$1.Mac" test
