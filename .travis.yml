@@ -1,3 +1,7 @@
+# Coveralls code coverage uses Cocoanetics' script:
+# https://github.com/cocoanetics/ruby
+# http://www.cocoanetics.com/2013/10/xcode-coverage/
+
 language: objective-c
 before_install:
   - export LANG=en_US.UTF-8
