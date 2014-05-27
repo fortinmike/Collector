@@ -1,3 +1,3 @@
 language: objective-c
-before_install: - gem install cocoapods -v '0.33.1'
+before_install: gem install cocoapods -v '0.33.1'
 script: Scripts/travis-build.sh
