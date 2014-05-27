@@ -1,5 +1,6 @@
 # Collector
 
+[![Build Status](https://travis-ci.org/fortinmike/Collector.svg?branch=master)](https://travis-ci.org/fortinmike/Collector)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Collector/badge.png)](http://cocoadocs.org/docsets/Collector)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Collector/badge.png)](http://cocoadocs.org/docsets/Collector)
 
