@@ -4,14 +4,11 @@ PODS:
   - Kiwi/XCTest (2.2.4):
     - Kiwi/ARC
     - Kiwi/NonARC
-  - MAObjCRuntime (0.0.1)
 
 DEPENDENCIES:
   - Kiwi/XCTest (~> 2.2.4)
-  - MAObjCRuntime (~> 0.0.1)
 
 SPEC CHECKSUMS:
   Kiwi: c73667f2b84cbf36f1a3830267c5a4ae8dcbd8ba
-  MAObjCRuntime: 9e99082c438f06c209203dbd77083cc308d9216a
 
 COCOAPODS: 0.33.1

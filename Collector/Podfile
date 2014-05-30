@@ -7,7 +7,6 @@ osx_version = '10.7'
 
 def library_pods
 	podspec :path => '../Collector.podspec'
-	pod 'MAObjCRuntime', '~> 0.0.1'
 end
 
 target "Collector.iOS" do
