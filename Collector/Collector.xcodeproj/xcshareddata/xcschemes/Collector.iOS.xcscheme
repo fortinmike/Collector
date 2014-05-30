@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4CC18D2219145C6400CEECEC"
-               BuildableName = "Collector.iOS.dylib"
+               BlueprintIdentifier = "4C1FDE38193613D700ACA448"
+               BuildableName = "libCollector.iOS.a"
                BlueprintName = "Collector.iOS"
                ReferencedContainer = "container:Collector.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4CC18D2E19145C6400CEECEC"
+               BlueprintIdentifier = "4C1FDE46193613D700ACA448"
                BuildableName = "Collector.iOS.Tests.xctest"
                BlueprintName = "Collector.iOS.Tests"
                ReferencedContainer = "container:Collector.xcodeproj">

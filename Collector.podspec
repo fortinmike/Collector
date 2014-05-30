@@ -13,5 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Collector/Source'
+  s.prefix_header_file = 'Collector/Source/Collector-Prefix.pch'
   s.public_header_files = 'Collector/Source/**/*.h'
 end

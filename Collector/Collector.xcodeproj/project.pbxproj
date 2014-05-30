@@ -7,69 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C42540D192A526200C5041F /* NSMutableArray+StackSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C42540C192A526200C5041F /* NSMutableArray+StackSpec.m */; };
-		4C42540E192A526200C5041F /* NSMutableArray+StackSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C42540C192A526200C5041F /* NSMutableArray+StackSpec.m */; };
-		4C42540F192A526A00C5041F /* NSMutableArray+QueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573FA192A51020089DBB5 /* NSMutableArray+QueueSpec.m */; };
-		4C425410192A526F00C5041F /* NSMutableArray+QueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573FA192A51020089DBB5 /* NSMutableArray+QueueSpec.m */; };
-		4C425412192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */; };
-		4C425413192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */; };
-		4C4AA6FF1920150F008FB311 /* NSArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */; };
-		4C4AA7001920150F008FB311 /* NSArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */; };
-		4C4AA7011920150F008FB311 /* NSArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */; };
-		4C4AA7021920150F008FB311 /* NSArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */; };
-		4C4AA70519201B50008FB311 /* NSArray+Numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA70319201B50008FB311 /* NSArray+Numbers.h */; };
-		4C4AA70619201B50008FB311 /* NSArray+Numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA70319201B50008FB311 /* NSArray+Numbers.h */; };
-		4C4AA70719201B50008FB311 /* NSArray+Numbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA70419201B50008FB311 /* NSArray+Numbers.m */; };
-		4C4AA70819201B50008FB311 /* NSArray+Numbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA70419201B50008FB311 /* NSArray+Numbers.m */; };
-		4C4AA70B19201E08008FB311 /* NSArray+Contents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA70919201E08008FB311 /* NSArray+Contents.h */; };
-		4C4AA70C19201E08008FB311 /* NSArray+Contents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA70919201E08008FB311 /* NSArray+Contents.h */; };
-		4C4AA70D19201E08008FB311 /* NSArray+Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA70A19201E08008FB311 /* NSArray+Contents.m */; };
-		4C4AA70E19201E08008FB311 /* NSArray+Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA70A19201E08008FB311 /* NSArray+Contents.m */; };
-		4C4AA714192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */; };
-		4C4AA715192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */; };
-		4C4AA7171920763C008FB311 /* NSArray+ContentsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */; };
-		4C4AA7181920763C008FB311 /* NSArray+ContentsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */; };
-		4C4AA71A192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */; };
-		4C4AA71B192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */; };
-		4C4AA71E1920823D008FB311 /* NSArray+Sorting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */; };
-		4C4AA71F1920823D008FB311 /* NSArray+Sorting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */; };
-		4C4AA7201920823D008FB311 /* NSArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */; };
-		4C4AA7211920823D008FB311 /* NSArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */; };
-		4C4AA7231920826A008FB311 /* CollectorBlockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */; };
-		4C4AA7241920826A008FB311 /* CollectorBlockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */; };
+		4C1FDE3B193613D700ACA448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FDE3A193613D700ACA448 /* Foundation.framework */; };
+		4C1FDE48193613D800ACA448 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
+		4C1FDE49193613D800ACA448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FDE3A193613D700ACA448 /* Foundation.framework */; };
+		4C38666D19361EBE00BF98B6 /* libCollector.iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FDE39193613D700ACA448 /* libCollector.iOS.a */; };
 		4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19719145D25009CB21B /* Collector.Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5BB18219145D24009CB21B /* Collector.Mac.framework */; };
-		4CC18D2419145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
-		4CC18D3019145C6400CEECEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
-		4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
-		4CC18D3419145C6400CEECEC /* Collector.iOS.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC18D2319145C6400CEECEC /* Collector.iOS.dylib */; };
-		4CC18D4719145C9B00CEECEC /* Collector-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */; };
-		4CC573EA192A4FE10089DBB5 /* NSMutableArray+Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC573E8192A4FE10089DBB5 /* NSMutableArray+Queue.h */; };
-		4CC573EB192A4FE10089DBB5 /* NSMutableArray+Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC573E8192A4FE10089DBB5 /* NSMutableArray+Queue.h */; };
-		4CC573EC192A4FE10089DBB5 /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573E9192A4FE10089DBB5 /* NSMutableArray+Queue.m */; };
-		4CC573ED192A4FE10089DBB5 /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573E9192A4FE10089DBB5 /* NSMutableArray+Queue.m */; };
-		4CC573F0192A50100089DBB5 /* NSMutableArray+Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC573EE192A50100089DBB5 /* NSMutableArray+Stack.h */; };
-		4CC573F1192A50100089DBB5 /* NSMutableArray+Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC573EE192A50100089DBB5 /* NSMutableArray+Stack.h */; };
-		4CC573F2192A50100089DBB5 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573EF192A50100089DBB5 /* NSMutableArray+Stack.m */; };
-		4CC573F3192A50100089DBB5 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573EF192A50100089DBB5 /* NSMutableArray+Stack.m */; };
-		4CC573F6192A50590089DBB5 /* NSMutableArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC573F4192A50590089DBB5 /* NSMutableArray+Collector.h */; };
-		4CC573F7192A50590089DBB5 /* NSMutableArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC573F4192A50590089DBB5 /* NSMutableArray+Collector.h */; };
-		4CC573F8192A50590089DBB5 /* NSMutableArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573F5192A50590089DBB5 /* NSMutableArray+Collector.m */; };
-		4CC573F9192A50590089DBB5 /* NSMutableArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC573F5192A50590089DBB5 /* NSMutableArray+Collector.m */; };
-		4CDD634E19231DF600936B49 /* NSArray+SortingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */; };
-		4CDD634F19231DF600936B49 /* NSArray+SortingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */; };
-		4CDD635119232E7800936B49 /* Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDD635019232E7800936B49 /* Collector.h */; };
+		4CA7EFD919380B4B00900ED5 /* CollectorBlockTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFCA19380B4B00900ED5 /* CollectorBlockTypes.h */; };
+		4CA7EFDA19380B4B00900ED5 /* NSArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFCB19380B4B00900ED5 /* NSArray+Collector.h */; };
+		4CA7EFDB19380B4B00900ED5 /* NSArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFCC19380B4B00900ED5 /* NSArray+Collector.m */; };
+		4CA7EFDC19380B4B00900ED5 /* NSArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFCC19380B4B00900ED5 /* NSArray+Collector.m */; };
+		4CA7EFDD19380B4B00900ED5 /* NSArray+Contents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFCD19380B4B00900ED5 /* NSArray+Contents.h */; };
+		4CA7EFDE19380B4B00900ED5 /* NSArray+Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFCE19380B4B00900ED5 /* NSArray+Contents.m */; };
+		4CA7EFDF19380B4B00900ED5 /* NSArray+Contents.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFCE19380B4B00900ED5 /* NSArray+Contents.m */; };
+		4CA7EFE019380B4B00900ED5 /* NSArray+Numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFCF19380B4B00900ED5 /* NSArray+Numbers.h */; };
+		4CA7EFE119380B4B00900ED5 /* NSArray+Numbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD019380B4B00900ED5 /* NSArray+Numbers.m */; };
+		4CA7EFE219380B4B00900ED5 /* NSArray+Numbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD019380B4B00900ED5 /* NSArray+Numbers.m */; };
+		4CA7EFE319380B4B00900ED5 /* NSArray+Sorting.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFD119380B4B00900ED5 /* NSArray+Sorting.h */; };
+		4CA7EFE419380B4B00900ED5 /* NSArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD219380B4B00900ED5 /* NSArray+Sorting.m */; };
+		4CA7EFE519380B4B00900ED5 /* NSArray+Sorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD219380B4B00900ED5 /* NSArray+Sorting.m */; };
+		4CA7EFE619380B4B00900ED5 /* NSMutableArray+Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFD319380B4B00900ED5 /* NSMutableArray+Collector.h */; };
+		4CA7EFE719380B4B00900ED5 /* NSMutableArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD419380B4B00900ED5 /* NSMutableArray+Collector.m */; };
+		4CA7EFE819380B4B00900ED5 /* NSMutableArray+Collector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD419380B4B00900ED5 /* NSMutableArray+Collector.m */; };
+		4CA7EFE919380B4B00900ED5 /* NSMutableArray+Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFD519380B4B00900ED5 /* NSMutableArray+Queue.h */; };
+		4CA7EFEA19380B4B00900ED5 /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD619380B4B00900ED5 /* NSMutableArray+Queue.m */; };
+		4CA7EFEB19380B4B00900ED5 /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD619380B4B00900ED5 /* NSMutableArray+Queue.m */; };
+		4CA7EFEC19380B4B00900ED5 /* NSMutableArray+Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7EFD719380B4B00900ED5 /* NSMutableArray+Stack.h */; };
+		4CA7EFED19380B4B00900ED5 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD819380B4B00900ED5 /* NSMutableArray+Stack.m */; };
+		4CA7EFEE19380B4B00900ED5 /* NSMutableArray+Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFD819380B4B00900ED5 /* NSMutableArray+Stack.m */; };
+		4CA7EFF619380B5D00900ED5 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFEF19380B5D00900ED5 /* NSArray+CollectorSpec.m */; };
+		4CA7EFF719380B5D00900ED5 /* NSArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFEF19380B5D00900ED5 /* NSArray+CollectorSpec.m */; };
+		4CA7EFF819380B5D00900ED5 /* NSArray+ContentsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF019380B5D00900ED5 /* NSArray+ContentsSpec.m */; };
+		4CA7EFF919380B5D00900ED5 /* NSArray+ContentsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF019380B5D00900ED5 /* NSArray+ContentsSpec.m */; };
+		4CA7EFFA19380B5D00900ED5 /* NSArray+NumbersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF119380B5D00900ED5 /* NSArray+NumbersSpec.m */; };
+		4CA7EFFB19380B5D00900ED5 /* NSArray+NumbersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF119380B5D00900ED5 /* NSArray+NumbersSpec.m */; };
+		4CA7EFFC19380B5D00900ED5 /* NSArray+SortingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF219380B5D00900ED5 /* NSArray+SortingSpec.m */; };
+		4CA7EFFD19380B5D00900ED5 /* NSArray+SortingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF219380B5D00900ED5 /* NSArray+SortingSpec.m */; };
+		4CA7EFFE19380B5D00900ED5 /* NSMutableArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF319380B5D00900ED5 /* NSMutableArray+CollectorSpec.m */; };
+		4CA7EFFF19380B5D00900ED5 /* NSMutableArray+CollectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF319380B5D00900ED5 /* NSMutableArray+CollectorSpec.m */; };
+		4CA7F00019380B5D00900ED5 /* NSMutableArray+QueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF419380B5D00900ED5 /* NSMutableArray+QueueSpec.m */; };
+		4CA7F00119380B5D00900ED5 /* NSMutableArray+QueueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF419380B5D00900ED5 /* NSMutableArray+QueueSpec.m */; };
+		4CA7F00219380B5D00900ED5 /* NSMutableArray+StackSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF519380B5D00900ED5 /* NSMutableArray+StackSpec.m */; };
+		4CA7F00319380B5D00900ED5 /* NSMutableArray+StackSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7EFF519380B5D00900ED5 /* NSMutableArray+StackSpec.m */; };
 		4CDD635219232E7800936B49 /* Collector.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDD635019232E7800936B49 /* Collector.h */; };
 		4CECFCF319145E540022AA2A /* Collector-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */; };
-		77A5CEDC863C43E087A7947A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
-		AE4B39FA553B48B2B35A0F47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
-		B9DC419F83E042C98E4F6929 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
-		D88E53385B1641678E62DA0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
+		9067FE6830914A1CADBD874E /* libPods-Collector.iOS.Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5982F2B4839549A98C81960B /* libPods-Collector.iOS.Tests.a */; };
+		A7789397B8A844CFB10BB460 /* libPods-Collector.Mac.Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAFBBF9E04145C7BFD9B526 /* libPods-Collector.Mac.Tests.a */; };
+		ABA5E303191F422D88F4D06D /* libPods-Collector.Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68214E7B330146CF89371C6D /* libPods-Collector.Mac.a */; };
+		B9CCF9A23E354CC39E1E4DB6 /* libPods-Collector.iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBEEB8F4DED45ACB66C909A /* libPods-Collector.iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C1FDE4C193613D800ACA448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C59964B19145A4900EFA82C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1FDE38193613D700ACA448;
+			remoteInfo = Collector.iOS;
+		};
 		4C5BB19519145D25009CB21B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4C59964B19145A4900EFA82C /* Project object */;
@@ -77,32 +74,28 @@
 			remoteGlobalIDString = 4C5BB18119145D24009CB21B;
 			remoteInfo = Collector.Mac;
 		};
-		4CC18D3219145C6400CEECEC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4C59964B19145A4900EFA82C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4CC18D2219145C6400CEECEC;
-			remoteInfo = Collector.iOS;
-		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C1FDE37193613D700ACA448 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		38990A9BF186483784019B54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		0EF9653CAB0B45F5A3505D95 /* Pods-Collector.iOS.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collector.iOS.Tests.xcconfig"; path = "Pods/Pods-Collector.iOS.Tests.xcconfig"; sourceTree = "<group>"; };
 		3F08C97F96A34A0F8AE9D657 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C42540C192A526200C5041F /* NSMutableArray+StackSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+StackSpec.m"; sourceTree = "<group>"; };
-		4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CollectorSpec.m"; sourceTree = "<group>"; };
-		4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Collector.h"; sourceTree = "<group>"; };
-		4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Collector.m"; sourceTree = "<group>"; };
-		4C4AA70319201B50008FB311 /* NSArray+Numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Numbers.h"; sourceTree = "<group>"; };
-		4C4AA70419201B50008FB311 /* NSArray+Numbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Numbers.m"; sourceTree = "<group>"; };
-		4C4AA70919201E08008FB311 /* NSArray+Contents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Contents.h"; sourceTree = "<group>"; };
-		4C4AA70A19201E08008FB311 /* NSArray+Contents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Contents.m"; sourceTree = "<group>"; };
-		4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NumbersSpec.m"; sourceTree = "<group>"; };
-		4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ContentsSpec.m"; sourceTree = "<group>"; };
-		4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CollectorSpec.m"; sourceTree = "<group>"; };
-		4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sorting.h"; sourceTree = "<group>"; };
-		4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sorting.m"; sourceTree = "<group>"; };
-		4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectorBlockTypes.h; sourceTree = "<group>"; };
+		4C1FDE39193613D700ACA448 /* libCollector.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCollector.iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1FDE3A193613D700ACA448 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C1FDE47193613D800ACA448 /* Collector.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Collector.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1FDE4A193613D800ACA448 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4C1FDE661936162700ACA448 /* Collector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Collector-Info.plist"; path = "Source/Collector-Info.plist"; sourceTree = "<group>"; };
 		4C59965719145A4900EFA82C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4C59965A19145A4900EFA82C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C59965B19145A4900EFA82C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -111,31 +104,69 @@
 		4C5BB18219145D24009CB21B /* Collector.Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Collector.Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5BB19219145D25009CB21B /* Collector.Mac.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Collector.Mac.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6128DE192AA53A00FD380B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
-		4CC18D2319145C6400CEECEC /* Collector.iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Collector.iOS.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CC18D2F19145C6400CEECEC /* Collector.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Collector.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CA7EFCA19380B4B00900ED5 /* CollectorBlockTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectorBlockTypes.h; sourceTree = "<group>"; };
+		4CA7EFCB19380B4B00900ED5 /* NSArray+Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Collector.h"; sourceTree = "<group>"; };
+		4CA7EFCC19380B4B00900ED5 /* NSArray+Collector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Collector.m"; sourceTree = "<group>"; };
+		4CA7EFCD19380B4B00900ED5 /* NSArray+Contents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Contents.h"; sourceTree = "<group>"; };
+		4CA7EFCE19380B4B00900ED5 /* NSArray+Contents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Contents.m"; sourceTree = "<group>"; };
+		4CA7EFCF19380B4B00900ED5 /* NSArray+Numbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Numbers.h"; sourceTree = "<group>"; };
+		4CA7EFD019380B4B00900ED5 /* NSArray+Numbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Numbers.m"; sourceTree = "<group>"; };
+		4CA7EFD119380B4B00900ED5 /* NSArray+Sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sorting.h"; sourceTree = "<group>"; };
+		4CA7EFD219380B4B00900ED5 /* NSArray+Sorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sorting.m"; sourceTree = "<group>"; };
+		4CA7EFD319380B4B00900ED5 /* NSMutableArray+Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Collector.h"; sourceTree = "<group>"; };
+		4CA7EFD419380B4B00900ED5 /* NSMutableArray+Collector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Collector.m"; sourceTree = "<group>"; };
+		4CA7EFD519380B4B00900ED5 /* NSMutableArray+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Queue.h"; sourceTree = "<group>"; };
+		4CA7EFD619380B4B00900ED5 /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Queue.m"; sourceTree = "<group>"; };
+		4CA7EFD719380B4B00900ED5 /* NSMutableArray+Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Stack.h"; sourceTree = "<group>"; };
+		4CA7EFD819380B4B00900ED5 /* NSMutableArray+Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Stack.m"; sourceTree = "<group>"; };
+		4CA7EFEF19380B5D00900ED5 /* NSArray+CollectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CollectorSpec.m"; sourceTree = "<group>"; };
+		4CA7EFF019380B5D00900ED5 /* NSArray+ContentsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ContentsSpec.m"; sourceTree = "<group>"; };
+		4CA7EFF119380B5D00900ED5 /* NSArray+NumbersSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NumbersSpec.m"; sourceTree = "<group>"; };
+		4CA7EFF219380B5D00900ED5 /* NSArray+SortingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SortingSpec.m"; sourceTree = "<group>"; };
+		4CA7EFF319380B5D00900ED5 /* NSMutableArray+CollectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CollectorSpec.m"; sourceTree = "<group>"; };
+		4CA7EFF419380B5D00900ED5 /* NSMutableArray+QueueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueSpec.m"; sourceTree = "<group>"; };
+		4CA7EFF519380B5D00900ED5 /* NSMutableArray+StackSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+StackSpec.m"; sourceTree = "<group>"; };
 		4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Collector-Prefix.pch"; path = "Source/Collector-Prefix.pch"; sourceTree = "<group>"; };
-		4CC18D4519145C9B00CEECEC /* Collector.Mac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Collector.Mac-Info.plist"; path = "Source/Collector.Mac-Info.plist"; sourceTree = "<group>"; };
-		4CC18D4A19145CA300CEECEC /* CollectorTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CollectorTests-Info.plist"; sourceTree = "<group>"; };
-		4CC252DC191C1E7300E49DF7 /* Collector.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Collector.podspec; path = ../Collector.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4CC18D4A19145CA300CEECEC /* CollectorTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CollectorTests-Info.plist"; path = "Tests/CollectorTests-Info.plist"; sourceTree = "<group>"; };
+		4CC252DC191C1E7300E49DF7 /* Collector.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 0; name = Collector.podspec; path = ../Collector.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4CC252DD191C1E7300E49DF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4CC573E8192A4FE10089DBB5 /* NSMutableArray+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Queue.h"; sourceTree = "<group>"; };
-		4CC573E9192A4FE10089DBB5 /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Queue.m"; sourceTree = "<group>"; };
-		4CC573EE192A50100089DBB5 /* NSMutableArray+Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Stack.h"; sourceTree = "<group>"; };
-		4CC573EF192A50100089DBB5 /* NSMutableArray+Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Stack.m"; sourceTree = "<group>"; };
-		4CC573F4192A50590089DBB5 /* NSMutableArray+Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Collector.h"; sourceTree = "<group>"; };
-		4CC573F5192A50590089DBB5 /* NSMutableArray+Collector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Collector.m"; sourceTree = "<group>"; };
-		4CC573FA192A51020089DBB5 /* NSMutableArray+QueueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueSpec.m"; sourceTree = "<group>"; };
-		4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SortingSpec.m"; sourceTree = "<group>"; };
-		4CDD635019232E7800936B49 /* Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collector.h; sourceTree = "<group>"; };
+		4CDD635019232E7800936B49 /* Collector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Collector.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5982F2B4839549A98C81960B /* libPods-Collector.iOS.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Collector.iOS.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66BC83AFC9EA4140A156940D /* Pods-Collector.Mac.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collector.Mac.Tests.xcconfig"; path = "Pods/Pods-Collector.Mac.Tests.xcconfig"; sourceTree = "<group>"; };
+		68214E7B330146CF89371C6D /* libPods-Collector.Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Collector.Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB03FFB13AE4EE183457E88 /* Pods-Collector.Mac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collector.Mac.xcconfig"; path = "Pods/Pods-Collector.Mac.xcconfig"; sourceTree = "<group>"; };
+		CFAFBBF9E04145C7BFD9B526 /* libPods-Collector.Mac.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Collector.Mac.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFBEEB8F4DED45ACB66C909A /* libPods-Collector.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Collector.iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12BBB930C904AC49970A276 /* Pods-Collector.iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collector.iOS.xcconfig"; path = "Pods/Pods-Collector.iOS.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C1FDE36193613D700ACA448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1FDE3B193613D700ACA448 /* Foundation.framework in Frameworks */,
+				B9CCF9A23E354CC39E1E4DB6 /* libPods-Collector.iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1FDE44193613D700ACA448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C38666D19361EBE00BF98B6 /* libCollector.iOS.a in Frameworks */,
+				4C1FDE48193613D800ACA448 /* XCTest.framework in Frameworks */,
+				4C1FDE49193613D800ACA448 /* Foundation.framework in Frameworks */,
+				9067FE6830914A1CADBD874E /* libPods-Collector.iOS.Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C5BB17E19145D24009CB21B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */,
-				AE4B39FA553B48B2B35A0F47 /* libPods.a in Frameworks */,
+				ABA5E303191F422D88F4D06D /* libPods-Collector.Mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,27 +177,7 @@
 				4C5BB19719145D25009CB21B /* Collector.Mac.framework in Frameworks */,
 				4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */,
 				4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */,
-				B9DC419F83E042C98E4F6929 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2019145C6400CEECEC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CC18D2419145C6400CEECEC /* Cocoa.framework in Frameworks */,
-				77A5CEDC863C43E087A7947A /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2C19145C6400CEECEC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */,
-				4CC18D3419145C6400CEECEC /* Collector.iOS.dylib in Frameworks */,
-				4CC18D3019145C6400CEECEC /* XCTest.framework in Frameworks */,
-				D88E53385B1641678E62DA0B /* libPods.a in Frameworks */,
+				A7789397B8A844CFB10BB460 /* libPods-Collector.Mac.Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,17 +192,20 @@
 				4C59965619145A4900EFA82C /* Frameworks */,
 				4C59965519145A4900EFA82C /* Products */,
 				4CC252DB191C1E5D00E49DF7 /* Supporting Files */,
-				38990A9BF186483784019B54 /* Pods.xcconfig */,
+				8DB03FFB13AE4EE183457E88 /* Pods-Collector.Mac.xcconfig */,
+				66BC83AFC9EA4140A156940D /* Pods-Collector.Mac.Tests.xcconfig */,
+				F12BBB930C904AC49970A276 /* Pods-Collector.iOS.xcconfig */,
+				0EF9653CAB0B45F5A3505D95 /* Pods-Collector.iOS.Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		4C59965519145A4900EFA82C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CC18D2319145C6400CEECEC /* Collector.iOS.dylib */,
-				4CC18D2F19145C6400CEECEC /* Collector.iOS.Tests.xctest */,
 				4C5BB18219145D24009CB21B /* Collector.Mac.framework */,
 				4C5BB19219145D25009CB21B /* Collector.Mac.Tests.xctest */,
+				4C1FDE39193613D700ACA448 /* libCollector.iOS.a */,
+				4C1FDE47193613D800ACA448 /* Collector.iOS.Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,8 +215,14 @@
 			children = (
 				4C59965719145A4900EFA82C /* Cocoa.framework */,
 				4C59966C19145A4900EFA82C /* XCTest.framework */,
+				4C1FDE3A193613D700ACA448 /* Foundation.framework */,
+				4C1FDE4A193613D800ACA448 /* UIKit.framework */,
 				4C59965919145A4900EFA82C /* Other Frameworks */,
 				3F08C97F96A34A0F8AE9D657 /* libPods.a */,
+				68214E7B330146CF89371C6D /* libPods-Collector.Mac.a */,
+				CFAFBBF9E04145C7BFD9B526 /* libPods-Collector.Mac.Tests.a */,
+				EFBEEB8F4DED45ACB66C909A /* libPods-Collector.iOS.a */,
+				5982F2B4839549A98C81960B /* libPods-Collector.iOS.Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,21 +241,21 @@
 			isa = PBXGroup;
 			children = (
 				4CDD635019232E7800936B49 /* Collector.h */,
-				4C4AA7221920826A008FB311 /* CollectorBlockTypes.h */,
-				4C4AA6FD1920150F008FB311 /* NSArray+Collector.h */,
-				4C4AA6FE1920150F008FB311 /* NSArray+Collector.m */,
-				4C4AA70919201E08008FB311 /* NSArray+Contents.h */,
-				4C4AA70A19201E08008FB311 /* NSArray+Contents.m */,
-				4C4AA70319201B50008FB311 /* NSArray+Numbers.h */,
-				4C4AA70419201B50008FB311 /* NSArray+Numbers.m */,
-				4C4AA71C1920823D008FB311 /* NSArray+Sorting.h */,
-				4C4AA71D1920823D008FB311 /* NSArray+Sorting.m */,
-				4CC573F4192A50590089DBB5 /* NSMutableArray+Collector.h */,
-				4CC573F5192A50590089DBB5 /* NSMutableArray+Collector.m */,
-				4CC573E8192A4FE10089DBB5 /* NSMutableArray+Queue.h */,
-				4CC573E9192A4FE10089DBB5 /* NSMutableArray+Queue.m */,
-				4CC573EE192A50100089DBB5 /* NSMutableArray+Stack.h */,
-				4CC573EF192A50100089DBB5 /* NSMutableArray+Stack.m */,
+				4CA7EFCA19380B4B00900ED5 /* CollectorBlockTypes.h */,
+				4CA7EFCB19380B4B00900ED5 /* NSArray+Collector.h */,
+				4CA7EFCC19380B4B00900ED5 /* NSArray+Collector.m */,
+				4CA7EFCD19380B4B00900ED5 /* NSArray+Contents.h */,
+				4CA7EFCE19380B4B00900ED5 /* NSArray+Contents.m */,
+				4CA7EFCF19380B4B00900ED5 /* NSArray+Numbers.h */,
+				4CA7EFD019380B4B00900ED5 /* NSArray+Numbers.m */,
+				4CA7EFD119380B4B00900ED5 /* NSArray+Sorting.h */,
+				4CA7EFD219380B4B00900ED5 /* NSArray+Sorting.m */,
+				4CA7EFD319380B4B00900ED5 /* NSMutableArray+Collector.h */,
+				4CA7EFD419380B4B00900ED5 /* NSMutableArray+Collector.m */,
+				4CA7EFD519380B4B00900ED5 /* NSMutableArray+Queue.h */,
+				4CA7EFD619380B4B00900ED5 /* NSMutableArray+Queue.m */,
+				4CA7EFD719380B4B00900ED5 /* NSMutableArray+Stack.h */,
+				4CA7EFD819380B4B00900ED5 /* NSMutableArray+Stack.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -243,14 +263,13 @@
 		4CC18D4919145CA300CEECEC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4CC18D4A19145CA300CEECEC /* CollectorTests-Info.plist */,
-				4C4AA719192076DD008FB311 /* NSArray+CollectorSpec.m */,
-				4C4AA7161920763C008FB311 /* NSArray+ContentsSpec.m */,
-				4C4AA713192075F1008FB311 /* NSArray+NumbersSpec.m */,
-				4CDD634D19231DF600936B49 /* NSArray+SortingSpec.m */,
-				4C425411192A530700C5041F /* NSMutableArray+CollectorSpec.m */,
-				4CC573FA192A51020089DBB5 /* NSMutableArray+QueueSpec.m */,
-				4C42540C192A526200C5041F /* NSMutableArray+StackSpec.m */,
+				4CA7EFEF19380B5D00900ED5 /* NSArray+CollectorSpec.m */,
+				4CA7EFF019380B5D00900ED5 /* NSArray+ContentsSpec.m */,
+				4CA7EFF119380B5D00900ED5 /* NSArray+NumbersSpec.m */,
+				4CA7EFF219380B5D00900ED5 /* NSArray+SortingSpec.m */,
+				4CA7EFF319380B5D00900ED5 /* NSMutableArray+CollectorSpec.m */,
+				4CA7EFF419380B5D00900ED5 /* NSMutableArray+QueueSpec.m */,
+				4CA7EFF519380B5D00900ED5 /* NSMutableArray+StackSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -259,9 +278,10 @@
 			isa = PBXGroup;
 			children = (
 				4C6128DE192AA53A00FD380B /* CHANGELOG.md */,
+				4C1FDE661936162700ACA448 /* Collector-Info.plist */,
 				4CC18D4419145C9B00CEECEC /* Collector-Prefix.pch */,
-				4CC18D4519145C9B00CEECEC /* Collector.Mac-Info.plist */,
 				4CC252DC191C1E7300E49DF7 /* Collector.podspec */,
+				4CC18D4A19145CA300CEECEC /* CollectorTests-Info.plist */,
 				4CC252DD191C1E7300E49DF7 /* README.md */,
 			);
 			name = "Supporting Files";
@@ -275,48 +295,70 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CECFCF319145E540022AA2A /* Collector-Prefix.pch in Headers */,
-				4C4AA71F1920823D008FB311 /* NSArray+Sorting.h in Headers */,
-				4CC573F7192A50590089DBB5 /* NSMutableArray+Collector.h in Headers */,
-				4C4AA70C19201E08008FB311 /* NSArray+Contents.h in Headers */,
-				4C4AA7001920150F008FB311 /* NSArray+Collector.h in Headers */,
-				4C4AA7241920826A008FB311 /* CollectorBlockTypes.h in Headers */,
-				4CC573F1192A50100089DBB5 /* NSMutableArray+Stack.h in Headers */,
-				4C4AA70619201B50008FB311 /* NSArray+Numbers.h in Headers */,
-				4CC573EB192A4FE10089DBB5 /* NSMutableArray+Queue.h in Headers */,
+				4CA7EFEC19380B4B00900ED5 /* NSMutableArray+Stack.h in Headers */,
+				4CA7EFD919380B4B00900ED5 /* CollectorBlockTypes.h in Headers */,
+				4CA7EFE319380B4B00900ED5 /* NSArray+Sorting.h in Headers */,
+				4CA7EFE019380B4B00900ED5 /* NSArray+Numbers.h in Headers */,
+				4CA7EFE619380B4B00900ED5 /* NSMutableArray+Collector.h in Headers */,
 				4CDD635219232E7800936B49 /* Collector.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2119145C6400CEECEC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CC18D4719145C9B00CEECEC /* Collector-Prefix.pch in Headers */,
-				4C4AA71E1920823D008FB311 /* NSArray+Sorting.h in Headers */,
-				4CC573F6192A50590089DBB5 /* NSMutableArray+Collector.h in Headers */,
-				4C4AA70B19201E08008FB311 /* NSArray+Contents.h in Headers */,
-				4C4AA6FF1920150F008FB311 /* NSArray+Collector.h in Headers */,
-				4C4AA7231920826A008FB311 /* CollectorBlockTypes.h in Headers */,
-				4CC573F0192A50100089DBB5 /* NSMutableArray+Stack.h in Headers */,
-				4C4AA70519201B50008FB311 /* NSArray+Numbers.h in Headers */,
-				4CC573EA192A4FE10089DBB5 /* NSMutableArray+Queue.h in Headers */,
-				4CDD635119232E7800936B49 /* Collector.h in Headers */,
+				4CA7EFDD19380B4B00900ED5 /* NSArray+Contents.h in Headers */,
+				4CA7EFE919380B4B00900ED5 /* NSMutableArray+Queue.h in Headers */,
+				4CA7EFDA19380B4B00900ED5 /* NSArray+Collector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4C1FDE38193613D700ACA448 /* Collector.iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1FDE57193613D800ACA448 /* Build configuration list for PBXNativeTarget "Collector.iOS" */;
+			buildPhases = (
+				426FD30D58B6487690F40BAD /* Check Pods Manifest.lock */,
+				4C1FDE35193613D700ACA448 /* Sources */,
+				4C1FDE36193613D700ACA448 /* Frameworks */,
+				4C1FDE37193613D700ACA448 /* CopyFiles */,
+				B6524FFD13774FF3865E0FEE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Collector.iOS;
+			productName = Collector.iOS;
+			productReference = 4C1FDE39193613D700ACA448 /* libCollector.iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4C1FDE46193613D700ACA448 /* Collector.iOS.Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1FDE5A193613D800ACA448 /* Build configuration list for PBXNativeTarget "Collector.iOS.Tests" */;
+			buildPhases = (
+				7B7A90CB0377442C94E7B2C6 /* Check Pods Manifest.lock */,
+				4C1FDE43193613D700ACA448 /* Sources */,
+				4C1FDE44193613D700ACA448 /* Frameworks */,
+				4C1FDE45193613D700ACA448 /* Resources */,
+				EA2E23D43DE941489A0F0326 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1FDE4D193613D800ACA448 /* PBXTargetDependency */,
+			);
+			name = Collector.iOS.Tests;
+			productName = Collector.iOSTests;
+			productReference = 4C1FDE47193613D800ACA448 /* Collector.iOS.Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4C5BB18119145D24009CB21B /* Collector.Mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C5BB1A019145D25009CB21B /* Build configuration list for PBXNativeTarget "Collector.Mac" */;
 			buildPhases = (
-				02C4FFE30FCA40E4AE427546 /* Check Pods Manifest.lock */,
+				DDF09C3EE18D427B8A7360C6 /* Check Pods Manifest.lock */,
 				4C5BB17D19145D24009CB21B /* Sources */,
 				4C5BB17E19145D24009CB21B /* Frameworks */,
 				4C5BB17F19145D24009CB21B /* Headers */,
 				4C5BB18019145D24009CB21B /* Resources */,
-				5936817F68EB443FA4F105D0 /* Copy Pods Resources */,
+				874EB99E93B748CEACF7D8F9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,11 +373,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C5BB1A319145D25009CB21B /* Build configuration list for PBXNativeTarget "Collector.Mac.Tests" */;
 			buildPhases = (
-				B8F8C71AE25042B8B08FF5C2 /* Check Pods Manifest.lock */,
+				1118D022D88C414D9F2861E3 /* Check Pods Manifest.lock */,
 				4C5BB18E19145D25009CB21B /* Sources */,
 				4C5BB18F19145D25009CB21B /* Frameworks */,
 				4C5BB19019145D25009CB21B /* Resources */,
-				A96DF2805EA5499CB3C764B6 /* Copy Pods Resources */,
+				6E7911FCE1C04ED9888BF0D2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,45 +389,6 @@
 			productReference = 4C5BB19219145D25009CB21B /* Collector.Mac.Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4CC18D2219145C6400CEECEC /* Collector.iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CC18D3D19145C6400CEECEC /* Build configuration list for PBXNativeTarget "Collector.iOS" */;
-			buildPhases = (
-				F40A7A054D0C4CA48AF77CF5 /* Check Pods Manifest.lock */,
-				4CC18D1F19145C6400CEECEC /* Sources */,
-				4CC18D2019145C6400CEECEC /* Frameworks */,
-				4CC18D2119145C6400CEECEC /* Headers */,
-				0C2DEE17C7AC48A180A512ED /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Collector.iOS;
-			productName = Collector.iOS;
-			productReference = 4CC18D2319145C6400CEECEC /* Collector.iOS.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
-		4CC18D2E19145C6400CEECEC /* Collector.iOS.Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CC18D4019145C6400CEECEC /* Build configuration list for PBXNativeTarget "Collector.iOS.Tests" */;
-			buildPhases = (
-				2831C023833445B6945D7BE8 /* Check Pods Manifest.lock */,
-				4CC18D2B19145C6400CEECEC /* Sources */,
-				4CC18D2C19145C6400CEECEC /* Frameworks */,
-				4CC18D2D19145C6400CEECEC /* Resources */,
-				7A6F756BB7B944A1B8680F7E /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4CC18D3319145C6400CEECEC /* PBXTargetDependency */,
-			);
-			name = Collector.iOS.Tests;
-			productName = Collector.iOSTests;
-			productReference = 4CC18D2F19145C6400CEECEC /* Collector.iOS.Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -395,11 +398,11 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Michaël Fortin";
 				TargetAttributes = {
-					4C5BB19119145D25009CB21B = {
-						TestTargetID = 4CC18D2219145C6400CEECEC;
+					4C1FDE46193613D700ACA448 = {
+						TestTargetID = 4C5BB18119145D24009CB21B;
 					};
-					4CC18D2E19145C6400CEECEC = {
-						TestTargetID = 4CC18D2219145C6400CEECEC;
+					4C5BB19119145D25009CB21B = {
+						TestTargetID = 4C5BB18119145D24009CB21B;
 					};
 				};
 			};
@@ -415,8 +418,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4CC18D2219145C6400CEECEC /* Collector.iOS */,
-				4CC18D2E19145C6400CEECEC /* Collector.iOS.Tests */,
+				4C1FDE38193613D700ACA448 /* Collector.iOS */,
+				4C1FDE46193613D700ACA448 /* Collector.iOS.Tests */,
 				4C5BB18119145D24009CB21B /* Collector.Mac */,
 				4C5BB19119145D25009CB21B /* Collector.Mac.Tests */,
 			);
@@ -424,6 +427,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C1FDE45193613D700ACA448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C5BB18019145D24009CB21B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,17 +448,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CC18D2D19145C6400CEECEC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		02C4FFE30FCA40E4AE427546 /* Check Pods Manifest.lock */ = {
+		1118D022D88C414D9F2861E3 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -463,22 +466,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		0C2DEE17C7AC48A180A512ED /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2831C023833445B6945D7BE8 /* Check Pods Manifest.lock */ = {
+		426FD30D58B6487690F40BAD /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -493,7 +481,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5936817F68EB443FA4F105D0 /* Copy Pods Resources */ = {
+		6E7911FCE1C04ED9888BF0D2 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -505,40 +493,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Collector.Mac.Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A6F756BB7B944A1B8680F7E /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A96DF2805EA5499CB3C764B6 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8F8C71AE25042B8B08FF5C2 /* Check Pods Manifest.lock */ = {
+		7B7A90CB0377442C94E7B2C6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -553,7 +511,37 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F40A7A054D0C4CA48AF77CF5 /* Check Pods Manifest.lock */ = {
+		874EB99E93B748CEACF7D8F9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Collector.Mac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6524FFD13774FF3865E0FEE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Collector.iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDF09C3EE18D427B8A7360C6 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -566,23 +554,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA2E23D43DE941489A0F0326 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Collector.iOS.Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C1FDE35193613D700ACA448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CA7EFED19380B4B00900ED5 /* NSMutableArray+Stack.m in Sources */,
+				4CA7EFDE19380B4B00900ED5 /* NSArray+Contents.m in Sources */,
+				4CA7EFE419380B4B00900ED5 /* NSArray+Sorting.m in Sources */,
+				4CA7EFE719380B4B00900ED5 /* NSMutableArray+Collector.m in Sources */,
+				4CA7EFDB19380B4B00900ED5 /* NSArray+Collector.m in Sources */,
+				4CA7EFE119380B4B00900ED5 /* NSArray+Numbers.m in Sources */,
+				4CA7EFEA19380B4B00900ED5 /* NSMutableArray+Queue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1FDE43193613D700ACA448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CA7F00019380B5D00900ED5 /* NSMutableArray+QueueSpec.m in Sources */,
+				4CA7EFFC19380B5D00900ED5 /* NSArray+SortingSpec.m in Sources */,
+				4CA7EFFA19380B5D00900ED5 /* NSArray+NumbersSpec.m in Sources */,
+				4CA7EFF619380B5D00900ED5 /* NSArray+CollectorSpec.m in Sources */,
+				4CA7F00219380B5D00900ED5 /* NSMutableArray+StackSpec.m in Sources */,
+				4CA7EFFE19380B5D00900ED5 /* NSMutableArray+CollectorSpec.m in Sources */,
+				4CA7EFF819380B5D00900ED5 /* NSArray+ContentsSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C5BB17D19145D24009CB21B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC573F3192A50100089DBB5 /* NSMutableArray+Stack.m in Sources */,
-				4CC573F9192A50590089DBB5 /* NSMutableArray+Collector.m in Sources */,
-				4C4AA7021920150F008FB311 /* NSArray+Collector.m in Sources */,
-				4C4AA7211920823D008FB311 /* NSArray+Sorting.m in Sources */,
-				4CDD634F19231DF600936B49 /* NSArray+SortingSpec.m in Sources */,
-				4C4AA70819201B50008FB311 /* NSArray+Numbers.m in Sources */,
-				4C4AA70E19201E08008FB311 /* NSArray+Contents.m in Sources */,
-				4CC573ED192A4FE10089DBB5 /* NSMutableArray+Queue.m in Sources */,
+				4CA7EFEE19380B4B00900ED5 /* NSMutableArray+Stack.m in Sources */,
+				4CA7EFDF19380B4B00900ED5 /* NSArray+Contents.m in Sources */,
+				4CA7EFE519380B4B00900ED5 /* NSArray+Sorting.m in Sources */,
+				4CA7EFE819380B4B00900ED5 /* NSMutableArray+Collector.m in Sources */,
+				4CA7EFDC19380B4B00900ED5 /* NSArray+Collector.m in Sources */,
+				4CA7EFE219380B4B00900ED5 /* NSArray+Numbers.m in Sources */,
+				4CA7EFEB19380B4B00900ED5 /* NSMutableArray+Queue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,59 +620,106 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4AA7181920763C008FB311 /* NSArray+ContentsSpec.m in Sources */,
-				4C4AA715192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */,
-				4C425413192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */,
-				4C4AA71B192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */,
-				4C425410192A526F00C5041F /* NSMutableArray+QueueSpec.m in Sources */,
-				4C42540E192A526200C5041F /* NSMutableArray+StackSpec.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D1F19145C6400CEECEC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CC573F2192A50100089DBB5 /* NSMutableArray+Stack.m in Sources */,
-				4CC573F8192A50590089DBB5 /* NSMutableArray+Collector.m in Sources */,
-				4C4AA7011920150F008FB311 /* NSArray+Collector.m in Sources */,
-				4C4AA7201920823D008FB311 /* NSArray+Sorting.m in Sources */,
-				4CDD634E19231DF600936B49 /* NSArray+SortingSpec.m in Sources */,
-				4C4AA70719201B50008FB311 /* NSArray+Numbers.m in Sources */,
-				4C4AA70D19201E08008FB311 /* NSArray+Contents.m in Sources */,
-				4CC573EC192A4FE10089DBB5 /* NSMutableArray+Queue.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2B19145C6400CEECEC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C4AA7171920763C008FB311 /* NSArray+ContentsSpec.m in Sources */,
-				4C4AA714192075F1008FB311 /* NSArray+NumbersSpec.m in Sources */,
-				4C425412192A530700C5041F /* NSMutableArray+CollectorSpec.m in Sources */,
-				4C4AA71A192076DD008FB311 /* NSArray+CollectorSpec.m in Sources */,
-				4C42540F192A526A00C5041F /* NSMutableArray+QueueSpec.m in Sources */,
-				4C42540D192A526200C5041F /* NSMutableArray+StackSpec.m in Sources */,
+				4CA7F00119380B5D00900ED5 /* NSMutableArray+QueueSpec.m in Sources */,
+				4CA7EFFD19380B5D00900ED5 /* NSArray+SortingSpec.m in Sources */,
+				4CA7EFFB19380B5D00900ED5 /* NSArray+NumbersSpec.m in Sources */,
+				4CA7EFF719380B5D00900ED5 /* NSArray+CollectorSpec.m in Sources */,
+				4CA7F00319380B5D00900ED5 /* NSMutableArray+StackSpec.m in Sources */,
+				4CA7EFFF19380B5D00900ED5 /* NSMutableArray+CollectorSpec.m in Sources */,
+				4CA7EFF919380B5D00900ED5 /* NSArray+ContentsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C1FDE4D193613D800ACA448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1FDE38193613D700ACA448 /* Collector.iOS */;
+			targetProxy = 4C1FDE4C193613D800ACA448 /* PBXContainerItemProxy */;
+		};
 		4C5BB19619145D25009CB21B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4C5BB18119145D24009CB21B /* Collector.Mac */;
 			targetProxy = 4C5BB19519145D25009CB21B /* PBXContainerItemProxy */;
 		};
-		4CC18D3319145C6400CEECEC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4CC18D2219145C6400CEECEC /* Collector.iOS */;
-			targetProxy = 4CC18D3219145C6400CEECEC /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4C1FDE58193613D800ACA448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12BBB930C904AC49970A276 /* Pods-Collector.iOS.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Collector_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Collector-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Source/Collector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4C1FDE59193613D800ACA448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12BBB930C904AC49970A276 /* Pods-Collector.iOS.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/Collector_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Collector-Prefix.pch";
+				INFOPLIST_FILE = "Source/Collector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C1FDE5B193613D800ACA448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF9653CAB0B45F5A3505D95 /* Pods-Collector.iOS.Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/CollectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4C1FDE5C193613D800ACA448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF9653CAB0B45F5A3505D95 /* Pods-Collector.iOS.Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "Tests/CollectorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		4C59967A19145A4900EFA82C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -677,9 +754,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wno-undeclared-selector";
 			};
 			name = Debug;
@@ -711,15 +788,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				WARNING_CFLAGS = "-Wno-undeclared-selector";
 			};
 			name = Release;
 		};
 		4C5BB1A119145D25009CB21B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
+			baseConfigurationReference = 8DB03FFB13AE4EE183457E88 /* Pods-Collector.Mac.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -731,7 +808,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Source/Collector.Mac-Info.plist";
+				INFOPLIST_FILE = "Source/Collector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -739,7 +816,7 @@
 		};
 		4C5BB1A219145D25009CB21B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
+			baseConfigurationReference = 8DB03FFB13AE4EE183457E88 /* Pods-Collector.Mac.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -747,7 +824,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Collector-Prefix.pch";
-				INFOPLIST_FILE = "Source/Collector.Mac-Info.plist";
+				INFOPLIST_FILE = "Source/Collector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -755,9 +832,9 @@
 		};
 		4C5BB1A419145D25009CB21B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
+			baseConfigurationReference = 66BC83AFC9EA4140A156940D /* Pods-Collector.Mac.Tests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Collector.iOS.dylib";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Collector.Mac.framework/Versions/A/Collector.Mac";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -777,77 +854,9 @@
 		};
 		4C5BB1A519145D25009CB21B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
+			baseConfigurationReference = 66BC83AFC9EA4140A156940D /* Pods-Collector.Mac.Tests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Collector.iOS.dylib";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "Tests/CollectorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-		4CC18D3E19145C6400CEECEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Collector-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		4CC18D3F19145C6400CEECEC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Collector-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		4CC18D4119145C6400CEECEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Collector.iOS.dylib";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tests/CollectorTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		4CC18D4219145C6400CEECEC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Collector.iOS.dylib";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Collector.Mac.framework/Versions/A/Collector.Mac";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -864,6 +873,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C1FDE57193613D800ACA448 /* Build configuration list for PBXNativeTarget "Collector.iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1FDE58193613D800ACA448 /* Debug */,
+				4C1FDE59193613D800ACA448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1FDE5A193613D800ACA448 /* Build configuration list for PBXNativeTarget "Collector.iOS.Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1FDE5B193613D800ACA448 /* Debug */,
+				4C1FDE5C193613D800ACA448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4C59964E19145A4900EFA82C /* Build configuration list for PBXProject "Collector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -887,24 +914,6 @@
 			buildConfigurations = (
 				4C5BB1A419145D25009CB21B /* Debug */,
 				4C5BB1A519145D25009CB21B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CC18D3D19145C6400CEECEC /* Build configuration list for PBXNativeTarget "Collector.iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CC18D3E19145C6400CEECEC /* Debug */,
-				4CC18D3F19145C6400CEECEC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CC18D4019145C6400CEECEC /* Build configuration list for PBXNativeTarget "Collector.iOS.Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CC18D4119145C6400CEECEC /* Debug */,
-				4CC18D4219145C6400CEECEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

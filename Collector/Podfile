@@ -1,4 +1,37 @@
-link_with 'Collector.iOS', 'Collector.iOS.Tests', 'Collector.Mac', 'Collector.Mac.Tests'
+inhibit_all_warnings!
 
-podspec :path => "../Collector.podspec"
-pod 'Kiwi/XCTest', '~> 2.2.4'
+ios_version = '6.1'
+osx_version = '10.7'
+
+# Library / Framework Targets
+
+def library_pods
+	podspec :path => '../Collector.podspec'
+	pod 'MAObjCRuntime', '~> 0.0.1'
+end
+
+target "Collector.iOS" do
+	platform :ios, ios_version
+	library_pods
+end
+
+target "Collector.Mac" do
+	platform :osx, osx_version
+	library_pods
+end
+
+# Test Targets
+
+def test_pods
+  pod 'Kiwi/XCTest', '~> 2.2.4'
+end
+
+target "Collector.iOS.Tests" do
+	platform :ios, ios_version
+	test_pods
+end
+
+target "Collector.Mac.Tests" do
+	platform :osx, osx_version
+	test_pods
+end
